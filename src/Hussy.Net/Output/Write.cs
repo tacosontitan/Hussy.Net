@@ -3,7 +3,7 @@
 /// <summary>
 /// Defines static methods for common programming tasks.
 /// </summary>
-public static class Hussy
+public static partial class Hussy
 {
     /// <summary>
     /// Writes the specified value, followed by the current line terminator, to the standard output stream.
