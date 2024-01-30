@@ -1,1 +1,2 @@
 ﻿W("Hello, world!");
+Yo();
