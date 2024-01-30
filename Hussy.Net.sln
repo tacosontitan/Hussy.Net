@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hussy.Net.Terminal", "Hussy.Net.Terminal\Hussy.Net.Terminal.csproj", "{14788585-4CAA-415C-8B29-B4E2BBDC9C66}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hussy.Net.Terminal", "src\Hussy.Net.Terminal\Hussy.Net.Terminal.csproj", "{14788585-4CAA-415C-8B29-B4E2BBDC9C66}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hussy.Net", "src\Hussy.Net\Hussy.Net.csproj", "{D518FE46-8221-4751-9D6A-6CD0E0779A2F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,5 +14,9 @@ Global
 		{14788585-4CAA-415C-8B29-B4E2BBDC9C66}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{14788585-4CAA-415C-8B29-B4E2BBDC9C66}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{14788585-4CAA-415C-8B29-B4E2BBDC9C66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D518FE46-8221-4751-9D6A-6CD0E0779A2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D518FE46-8221-4751-9D6A-6CD0E0779A2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D518FE46-8221-4751-9D6A-6CD0E0779A2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D518FE46-8221-4751-9D6A-6CD0E0779A2F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
