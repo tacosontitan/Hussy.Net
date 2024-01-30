@@ -18,7 +18,19 @@ public struct L
     /// <inhreitdoc />
     public int CompareTo(object? obj)
     {
-        throw new NotImplementedException();
+        if (obj is null)
+            return 1;
+
+        if (obj is not L other)
+            throw new ArgumentException("Object is not a logical.");
+        
+        if (_value && !other._value)
+            return 1;
+
+        if (!_value && other._value)
+            return -1;
+
+        return 0;
     }
 
     /// <inhreitdoc />
