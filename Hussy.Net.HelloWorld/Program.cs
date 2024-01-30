@@ -1,0 +1,1 @@
+﻿W("Hello, world!");
