@@ -8,7 +8,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{B43C73D9-7CA
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{C08B73E3-E9BB-44DE-AE74-647A442780D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hussy.Net.HelloWorld", "Hussy.Net.HelloWorld\Hussy.Net.HelloWorld.csproj", "{F62EF1EB-4853-40E4-AF69-80BB5282270C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hussy.Net.HelloWorld", "samples\Hussy.Net.HelloWorld\Hussy.Net.HelloWorld.csproj", "{F62EF1EB-4853-40E4-AF69-80BB5282270C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
