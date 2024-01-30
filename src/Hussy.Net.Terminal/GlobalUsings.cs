@@ -1,0 +1,1 @@
+﻿global using static Hussy.Net.Hussy;
