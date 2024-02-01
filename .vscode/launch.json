@@ -1,0 +1,27 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Terminal",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "Build",
+            "program": "${workspaceFolder}/src/Hussy.Net.Terminal/bin/Debug/net8.0/Hussy.Net.Terminal.exe",
+            "args": [],
+            "cwd": "${workspaceFolder}/src/Hussy.Net.Terminal",
+            "console": "integratedTerminal",
+            "stopAtEntry": false
+        },
+        {
+            "name": "Samples (Hello World)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "Build",
+            "program": "${workspaceFolder}/samples/Hussy.Net.HelloWorld/bin/Debug/net8.0/Hussy.Net.HelloWorld.exe",
+            "args": [],
+            "cwd": "${workspaceFolder}/samples/Hussy.Net.HelloWorld",
+            "console": "integratedTerminal",
+            "stopAtEntry": false
+        }
+    ],
+}
