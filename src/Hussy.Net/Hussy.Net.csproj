@@ -1,1 +1,7 @@
-﻿<Project Sdk="Microsoft.NET.Sdk" />
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <Content Include="..\..\README.md">
+      <Link>README.md</Link>
+    </Content>
+  </ItemGroup>
+</Project>

@@ -8,4 +8,10 @@
       <ProjectReference Include="..\Hussy.Net\Hussy.Net.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Content Include="..\..\README.md">
+        <Link>README.md</Link>
+      </Content>
+    </ItemGroup>
+
 </Project>
