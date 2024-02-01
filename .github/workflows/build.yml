@@ -1,0 +1,39 @@
+name: "🏗️ Build and Test 🧪"
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main", "support/*" ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: ✅ Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: 8.0.x
+          
+      - name: 📦 Cache Packages
+        uses: actions/cache@v2
+        with:
+          path: |
+            ~/.nuget/packages
+            !~/.nuget/packages/**/content
+            !~/.nuget/packages/**/contentFiles
+          key: ${{ runner.os }}-dotnet-${{ hashFiles('**/packages.lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-dotnet-
+
+      - name: ⬇️ Restore Dependencies
+        run: dotnet restore
+
+      - name: 🏗️ Build
+        run: dotnet build -c Release --no-restore
+
+      - name: 🧪 Test
+        run: dotnet test -c Release --no-build --verbosity normal
