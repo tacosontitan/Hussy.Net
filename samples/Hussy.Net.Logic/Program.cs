@@ -7,7 +7,7 @@ R(10).F(EV).E(W);
 // Print all odd numbers from 1 to 10.
 // The function OD takes in a numeric value
 // and determines if it is odd or not.
-W("\n\nOdd");
+WH("Odd");
 R(10).F(OD).E(W);
 
 // Print all numbers between 1 and 100
@@ -15,5 +15,5 @@ R(10).F(OD).E(W);
 // The function MD extends numeric types
 // determining if the instance value
 // is divisible by all the specified operands.
-W("\n\nModulus");
+WH("Modulus");
 R(100).F(x => x.MD(3, 5)).E(W);
