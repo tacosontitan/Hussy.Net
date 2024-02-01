@@ -1,0 +1,12 @@
+<Project>
+    <PropertyGroup>
+        <LangVersion>preview</LangVersion>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Glitter" Version="2024.3.1.1" />
+    </ItemGroup>
+</Project>
