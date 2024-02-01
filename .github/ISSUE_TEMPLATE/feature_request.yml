@@ -1,0 +1,29 @@
+name: ⭐ Request a new feature
+description: Have an idea? You can request a new feature here.
+labels: [ enhancement,under review ]
+body:
+  - type: dropdown
+    id: version
+    attributes:
+      label: 🔢 Version
+      description: Which version are you currently using?
+      options:
+        - 🐣 Pre-Release
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: 🤔 What problem does your proposition aim to solve?
+      description: If your feature request is related to a problem, describe it clearly.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: 📝 How would you like the feature to work?
+      description: Please give a brief explanation and a sample implementation.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: 🧪 What have you already tried?
+      description: Describe alternatives you've considered.
