@@ -15,7 +15,7 @@ public struct L
     private L(bool value) =>
         _value = value;
     
-    /// <inhreitdoc />
+    /// <inheritdoc />
     public int CompareTo(object? obj)
     {
         if (obj is null)
@@ -33,81 +33,81 @@ public struct L
         return 0;
     }
 
-    /// <inhreitdoc />
+    /// <inheritdoc />
     public int CompareTo(L other) =>
         _value.CompareTo(other._value);
 
-    /// <inhreitdoc />
+    /// <inheritdoc />
     public TypeCode GetTypeCode() =>
         TypeCode.Boolean;
 
-    /// <inhreitdoc />
+    /// <inheritdoc />
     public bool ToBoolean(IFormatProvider? provider) => _value;
 
-    /// <inhreitdoc />
+    /// <inheritdoc />
     public byte ToByte(IFormatProvider? provider) =>
         _value.To<byte>(provider);
 
     public char ToChar(IFormatProvider? provider) =>
         _value.To<char>(provider);
 
-    /// <inhreitdoc />
+    /// <inheritdoc />
     public DateTime ToDateTime(IFormatProvider? provider) =>
         _value.To<DateTime>(provider);
 
-    /// <inhreitdoc />
+    /// <inheritdoc />
     public decimal ToDecimal(IFormatProvider? provider) =>
         _value.To<decimal>(provider);
 
-    /// <inhreitdoc />
+    /// <inheritdoc />
     public double ToDouble(IFormatProvider? provider) =>
         _value.To<double>(provider);
     
-    /// <inhreitdoc />
+    /// <inheritdoc />
     public short ToInt16(IFormatProvider? provider) =>
         _value.To<short>(provider);
 
-    /// <inhreitdoc />
+    /// <inheritdoc />
     public int ToInt32(IFormatProvider? provider) =>
         _value.To<int>(provider);
 
-    /// <inhreitdoc />
+    /// <inheritdoc />
     public long ToInt64(IFormatProvider? provider) =>
         _value.To<long>(provider);
 
-    /// <inhreitdoc />
+    /// <inheritdoc />
     public sbyte ToSByte(IFormatProvider? provider) =>
         _value.To<sbyte>(provider);
 
-    /// <inhreitdoc />
+    /// <inheritdoc />
     public float ToSingle(IFormatProvider? provider) =>
         _value.To<float>(provider);
 
-    /// <inhreitdoc />
+    /// <inheritdoc />
     public string ToString(IFormatProvider? provider) =>
         _value.ToString(provider);
 
-    /// <inhreitdoc />
+    /// <inheritdoc />
     public object ToType(Type conversionType, IFormatProvider? provider) =>
         Convert.ChangeType(_value, conversionType, provider);
 
-    /// <inhreitdoc />
+    /// <inheritdoc />
     public ushort ToUInt16(IFormatProvider? provider) =>
         _value.To<ushort>(provider);
 
-    /// <inhreitdoc />
+    /// <inheritdoc />
     public uint ToUInt32(IFormatProvider? provider) =>
         _value.To<uint>(provider);
 
-    /// <inhreitdoc />
+    /// <inheritdoc />
     public ulong ToUInt64(IFormatProvider? provider) =>
         _value.To<ulong>(provider);
 
-    /// <inhreitdoc />
+    /// <inheritdoc />
     public bool Equals(L other) =>
         _value.Equals(other._value);
 
-    /// <inhreitdoc />
+    /// <inheritdoc />
     public static L Parse(string s, IFormatProvider? provider)
     {
         if (bool.TryParse(s, out bool value))
@@ -119,7 +119,7 @@ public struct L
         throw new FormatException();
     }
 
-    /// <inhreitdoc />
+    /// <inheritdoc />
     public static bool TryParse(string? s, IFormatProvider? provider, out L result)
     {
         if (bool.TryParse(s, out bool value))
@@ -138,7 +138,7 @@ public struct L
         return false;
     }
 
-    /// <inhreitdoc />
+    /// <inheritdoc />
     public static L Parse(ReadOnlySpan<char> s, IFormatProvider? provider)
     {
         if (bool.TryParse(s, out bool value))
@@ -150,7 +150,7 @@ public struct L
         throw new FormatException();
     }
 
-    /// <inhreitdoc />
+    /// <inheritdoc />
     public static bool TryParse(ReadOnlySpan<char> s, IFormatProvider? provider, out L result)
     {
         if (bool.TryParse(s, out bool value))
