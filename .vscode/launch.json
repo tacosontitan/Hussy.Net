@@ -13,6 +13,28 @@
             "stopAtEntry": false
         },
         {
+            "name": "Samples (Output)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "Build",
+            "program": "${workspaceFolder}/samples/Hussy.Net.Output/bin/Debug/net8.0/Hussy.Net.Output.exe",
+            "args": [],
+            "cwd": "${workspaceFolder}/samples/Hussy.Net.Output",
+            "console": "integratedTerminal",
+            "stopAtEntry": false
+        },
+        {
+            "name": "Samples (Logic)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "Build",
+            "program": "${workspaceFolder}/samples/Hussy.Net.Logic/bin/Debug/net8.0/Hussy.Net.Logic.exe",
+            "args": [],
+            "cwd": "${workspaceFolder}/samples/Hussy.Net.Logic",
+            "console": "integratedTerminal",
+            "stopAtEntry": false
+        },
+        {
             "name": "Samples (Hello World)",
             "type": "coreclr",
             "request": "launch",
@@ -20,6 +42,17 @@
             "program": "${workspaceFolder}/samples/Hussy.Net.HelloWorld/bin/Debug/net8.0/Hussy.Net.HelloWorld.exe",
             "args": [],
             "cwd": "${workspaceFolder}/samples/Hussy.Net.HelloWorld",
+            "console": "integratedTerminal",
+            "stopAtEntry": false
+        },
+        {
+            "name": "Samples (Fizz Buzz)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "Build",
+            "program": "${workspaceFolder}/samples/Hussy.Net.FizzBuzz/bin/Debug/net8.0/Hussy.Net.FizzBuzz.exe",
+            "args": [],
+            "cwd": "${workspaceFolder}/samples/Hussy.Net.FizzBuzz",
             "console": "integratedTerminal",
             "stopAtEntry": false
         }
