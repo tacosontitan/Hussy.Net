@@ -1,4 +1,4 @@
-﻿namespace Hussy.Net.Primitives;
+﻿namespace Hussy.Net;
 
 /// <summary>
 /// Represents a logical value such as <see langword="true"/> or <see langword="false"/>.
