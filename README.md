@@ -18,6 +18,10 @@ Get started by reviewing the answers to the following questions:
 - [What's the latest?](./resources/RELEASE_NOTES.md)
 - [Where are we going next?](./resources/ROADMAP.md)
 
+### 🔎 Review Samples
+
+There are several sample projects that actively demonstrate using Hussy.Net from the basics to solving common problems like the Fizz Buzz challenge.
+
 ### 🧪 Testing Snippets
 
 The `Hussy.Net.Terminal` project is the place to run your snippets written with Hussy.Net. To get started, fork the repository and clone it to your local machine. Then open the `Hussy.Net` solution and locate the `Program.cs` file under `Hussy.Net.Terminal`. It looks like this:
