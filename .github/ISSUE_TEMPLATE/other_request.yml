@@ -1,0 +1,32 @@
+name: 🧠 It's something else
+description: Need to open an issue for something that isn't a bug, feature, or command? This template has you covered!
+labels: [ needs categorization,under review ]
+body:
+  - type: dropdown
+    id: category
+    attributes:
+      label: 🐛 Category
+      description: What type of issue are you trying to report?
+      options:
+        - 💽 Repository
+        - 🛝 GitHub Actions
+        - 📃 Documentation
+        - 😖 Other
+  - type: dropdown
+    id: version
+    attributes:
+      label: 🔢 Version
+      description: Which version are you currently using?
+      options:
+        - ⛔ Not Applicable
+        - 🐣 Pre-Release
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: 🤔 What's happening?
+      description: Please give a brief explanation and a sample implementation.
+  - type: textarea
+    attributes:
+      label: 📝 What was your expectation?
+      description: Please give a brief explanation.
