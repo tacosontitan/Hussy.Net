@@ -1,0 +1,9 @@
+﻿{
+  "$schema": "http://json.schemastore.org/launchsettings.json",
+  "profiles": {
+    "DebugRoslynAnalyzers": {
+      "commandName": "DebugRoslynComponent",
+      "targetProject": "../Hussy.Net.Analyzers.Sample/Hussy.Net.Analyzers.Sample.csproj"
+    }
+  }
+}
