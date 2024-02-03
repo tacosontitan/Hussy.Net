@@ -26,15 +26,15 @@ public static partial class Hussy
     /// multiples of 3, "Buzz" for multiples of 5, and the numeric value for any other value.
     /// </summary>
     /// <param name="count">The number of values to print.</param>
-    public static void FZ(int count) =>
-        FZ(start: 1, count);
+    public static void Fz(int count) =>
+        Fz(start: 1, count);
     
     /// <summary>
     /// Creates a collection of a specified <paramref name="count"/> of numbers from a specified <paramref name="start"/> value and prints <c>FizzBuzz</c> for multiples of <c>3</c> and <c>5</c>, <c>Fizz</c> for multiples of <c>3</c>, <c>Buzz</c> for multiples of <c>5</c>, and the numeric value for any other value.
     /// </summary>
     /// <param name="start">The starting number.</param>
     /// <param name="count">The number of values to print.</param>
-    public static void FZ(int start, int count) => Enumerable.Range(start, count)
+    public static void Fz(int start, int count) => Enumerable.Range(start, count)
         .ToList()
         .ForEach(PrintFizzBuzz);
 

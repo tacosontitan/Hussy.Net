@@ -26,7 +26,7 @@ public static partial class Hussy
     /// </summary>
     /// <param name="count">The maximum value to include in the range.</param>
     /// <returns>A range of values starting with <c>1</c> through the specified <paramref name="count"/> value.</returns>
-    public static IEnumerable<int> R(int count) =>
+    public static IEnumerable<int> Gr(int count) =>
         Enumerable.Range(1, count);
 
     /// <summary>
@@ -35,7 +35,7 @@ public static partial class Hussy
     /// <param name="start">The starting value for the range.</param>
     /// <param name="count">The maximum value to include in the range.</param>
     /// <returns>A range of values starting with <paramref name="start"/> through the specified <paramref name="count"/> value.</returns>
-    public static IEnumerable<int> R(int start, int count) =>
+    public static IEnumerable<int> Gr(int start, int count) =>
         Enumerable.Range(start, count);
 
     /// <summary>
@@ -45,7 +45,7 @@ public static partial class Hussy
     /// <param name="count">The maximum value to include in the range.</param>
     /// <param name="stepSize">The step value to use when generating the range.</param>
     /// <returns>A range of values starting with <paramref name="start"/> through the specified <paramref name="count"/> value.</returns>
-    public static IEnumerable<int> R(int start, int count, int stepSize)
+    public static IEnumerable<int> Gr(int start, int count, int stepSize)
     {
         List<int> range = new(capacity: count);
         for (int i = 0; i < count; i++)

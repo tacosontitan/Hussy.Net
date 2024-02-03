@@ -29,7 +29,7 @@ public static partial class Hussy
     /// <returns>
     /// <c>true</c> if the value is divisible by all the operands; otherwise, <c>false</c>.
     /// </returns>
-    public static bool MD(this int value, params int[] operands)
+    public static bool Md(this int value, params int[] operands)
     {
         foreach (int operand in operands)
             if (value % operand != 0)

@@ -25,6 +25,6 @@ public static partial class Hussy
     /// Writes the specified value to the console as a header (prefixed with two new lines).
     /// </summary>
     /// <param name="value">The value to be written.</param>
-    public static void WH<T>(T value) =>
+    public static void Wh<T>(T value) =>
         Console.WriteLine("\n\n{0}", value);
 }

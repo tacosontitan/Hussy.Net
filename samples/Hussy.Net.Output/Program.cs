@@ -25,7 +25,7 @@ W("Hello, world!");
 // parameters. The default character
 // is '=' and the default length is
 // 25.
-WS(character: '_', length: 30);
+Ws(character: '_', length: 30);
 
 // You can simply append to the stream
 // using the A function:
@@ -36,4 +36,4 @@ A("Buzz");
 // visible chunks, then the WH method
 // can facilitate writing a line preceded
 // by two new lines.
-WH("Sample Header");
+Wh("Sample Header");
