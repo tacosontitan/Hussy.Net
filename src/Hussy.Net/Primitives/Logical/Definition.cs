@@ -43,4 +43,14 @@ public readonly partial struct L
     
     public static implicit operator L(string value) =>
         Parse(value, provider: null);
+
+    public static bool operator ==(L left, L right)
+    {
+        return left.Equals(right);
+    }
+
+    public static bool operator !=(L left, L right)
+    {
+        return !(left == right);
+    }
 }
