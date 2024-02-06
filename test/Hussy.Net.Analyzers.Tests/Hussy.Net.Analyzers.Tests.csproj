@@ -16,7 +16,8 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\Hussy.Net.Analyzers\Hussy.Net.Analyzers.csproj"/>
+      <ProjectReference Include="..\..\src\Hussy.Net.Analyzers\Hussy.Net.Analyzers.csproj" />
+      <ProjectReference Include="..\..\src\Hussy.Net\Hussy.Net.csproj" />
     </ItemGroup>
-
+    
 </Project>
