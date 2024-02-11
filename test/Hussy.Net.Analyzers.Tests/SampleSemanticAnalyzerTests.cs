@@ -1,4 +1,3 @@
-using System.Threading.Tasks;
 using Xunit;
 using Verifier =
     Microsoft.CodeAnalysis.CSharp.Testing.XUnit.AnalyzerVerifier<
@@ -11,25 +10,20 @@ public class SampleSemanticAnalyzerTests
     [Fact]
     public async Task SetSpeedHugeSpeedSpecified_AlertDiagnostic()
     {
-        const string text = @"
-public class Program
-{
-    public void Main()
-    {
-        var spaceship = new Spaceship();
-        spaceship.SetSpeed(300000000);
-    }
-}
-
-public class Spaceship
-{
-    public void SetSpeed(long speed) {}
-}
-";
+        const string text =
+            """
+            public class Program
+            {
+                public void Main()
+                {
+                    Console.WriteLine("...");
+                }
+            }
+            """;
 
         var expected = Verifier.Diagnostic()
-            .WithLocation(7, 28)
-            .WithArguments("300000000");
+            .WithLocation(5, 9);
+        
         await Verifier.VerifyAnalyzerAsync(text, expected);
     }
 }

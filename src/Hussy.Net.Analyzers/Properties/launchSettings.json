@@ -3,7 +3,7 @@
   "profiles": {
     "DebugRoslynAnalyzers": {
       "commandName": "DebugRoslynComponent",
-      "targetProject": "../Hussy.Net.Analyzers.Sample/Hussy.Net.Analyzers.Sample.csproj"
+      "targetProject": "../../samples/dotnet/Hussy.Net.Analyzers.Sample/Hussy.Net.Analyzers.Sample.csproj"
     }
   }
 }
