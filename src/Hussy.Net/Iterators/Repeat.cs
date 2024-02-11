@@ -21,9 +21,19 @@ namespace Hussy.Net;
 /// </summary>
 public static partial class Hussy
 {
-    public static void R<T>(Action<T> action, T input, Func<T, bool> breakCondition)
+    /// <summary>
+    /// Repeats the specified action with the specified input until the specified break condition is met.
+    /// </summary>
+    /// <param name="action">The action to repeat.</param>
+    /// <param name="input">The input to send to the action.</param>
+    /// <param name="escapeCondition">The condition for escaping the repeater.</param>
+    /// <typeparam name="T">Specifies the type of data the action works with.</typeparam>
+    public static void R<T>(
+        Action<T> action,
+        T input,
+        Func<T, bool>? escapeCondition = null)
     {
-        while (breakCondition?.Invoke(input) is not false)
+        while (escapeCondition?.Invoke(input) is not false)
             action(input);
     }
 }
