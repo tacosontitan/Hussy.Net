@@ -15,12 +15,3 @@
 */
 
 W("Hello, world!");
-
-var length = 3;
-var samples = "AB";
-if (samples.Any(a => samples.Count(c => a == c) > 1))
-{
-    W("Nope.");
-    return;
-}
-
