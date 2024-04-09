@@ -12,7 +12,8 @@ public sealed partial class TwoSum
     private static TestFunction[] TestFunctions =>
     [
         DryRun,
-        ComplexityRun
+        ComplexityRun,
+        GolfRun
     ];
     
     /// <summary>
