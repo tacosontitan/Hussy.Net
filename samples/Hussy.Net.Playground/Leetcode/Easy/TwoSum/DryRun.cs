@@ -22,7 +22,7 @@ public sealed partial class TwoSum
     {
         for (var x = 0; x < numbers.Length; x++)
         {
-            for (var y = 0; y < numbers.Length; y++)
+            for (var y = x + 1; y < numbers.Length; y++)
             {
                 if (x == y)
                     continue;
