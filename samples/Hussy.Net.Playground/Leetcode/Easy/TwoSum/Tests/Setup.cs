@@ -11,7 +11,8 @@ public sealed partial class TwoSum
     /// </summary>
     private static TestFunction[] TestFunctions =>
     [
-        DryRun
+        DryRun,
+        ComplexityRun
     ];
     
     /// <summary>
@@ -29,7 +30,7 @@ public sealed partial class TwoSum
             var resultingSequence = results.ToList();
 
             var excessResults = resultingSequence.Except(expectedSequence);
-            Assert.True(expectedSequence.All(resultingSequence.Contains));
+            Assert.True(expectedSequence.TrueForAll(resultingSequence.Contains));
             Assert.Empty(excessResults);
         }
     }
