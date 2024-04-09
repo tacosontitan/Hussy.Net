@@ -11,7 +11,7 @@ public sealed partial class TwoSum
     /// </summary>
     private static TestFunction[] TestFunctions =>
     [
-        
+        DryRun
     ];
     
     /// <summary>
