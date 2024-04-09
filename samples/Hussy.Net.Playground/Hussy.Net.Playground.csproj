@@ -27,4 +27,8 @@
       <ProjectReference Include="..\..\src\Hussy.Net\Hussy.Net.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Golfing\" />
+    </ItemGroup>
+
 </Project>
