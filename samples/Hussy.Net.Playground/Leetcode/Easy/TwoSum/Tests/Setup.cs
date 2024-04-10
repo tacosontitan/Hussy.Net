@@ -13,7 +13,8 @@ public sealed partial class TwoSum
     [
         DryRun,
         GolfedDryRun,
-        ComplexityRun
+        ComplexityRun,
+        GolfedComplexityRun
     ];
     
     /// <summary>
