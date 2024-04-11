@@ -11,10 +11,10 @@ public partial class Indexed<T>(
     /// <summary>
     /// Gets or sets the index of this element.
     /// </summary>
-    public int Index { get; set; } = index;
+    public int I { get; set; } = index;
 
     /// <summary>
     /// Gets or sets the value of this indexed element.
     /// </summary>
-    public T Value { get; set; } = value;
+    public T V { get; set; } = value;
 }
