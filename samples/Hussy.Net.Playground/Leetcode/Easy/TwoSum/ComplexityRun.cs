@@ -1,6 +1,4 @@
-﻿using Glitter.Collections;
-
-namespace Hussy.Net.Playground.Leetcode.Easy;
+﻿namespace Hussy.Net.Playground.Leetcode.Easy;
 
 /// <summary>
 /// Represents a solution and its tests for the leetcode two-sum problem.
