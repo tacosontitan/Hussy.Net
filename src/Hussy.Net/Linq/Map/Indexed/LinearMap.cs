@@ -13,14 +13,15 @@ public static partial class Hussy
     /// <returns>An enumerable containing the results of the mapping.</returns>
     public static IEnumerable<TResult> M<TSource, TResult>(
         this IEnumerable<TSource> source,
-        Func<int, TSource, TResult> mappingFunction)
+        Func<Indexed<TSource>, TResult> mappingFunction)
     {
         var index = 0;
         var sequence = source.ToList();
         var results = new List<TResult>(capacity: sequence.Count);
         foreach (var element in sequence)
         {
-            var result = mappingFunction(index++, element);
+            var indexedElement = new Indexed<TSource>(index, element);
+            var result = mappingFunction(indexedElement);
             results.Add(result);
         }
 
