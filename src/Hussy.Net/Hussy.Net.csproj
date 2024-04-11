@@ -1,7 +1,35 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-  <ItemGroup>
-    <Content Include="..\..\README.md">
-      <Link>README.md</Link>
-    </Content>
-  </ItemGroup>
+    
+    <PropertyGroup Label="Release Details">
+        <Version>1.0.0-preview-1</Version>
+        <PackageReleaseNotes>
+            Initial release.
+        </PackageReleaseNotes>
+    </PropertyGroup>
+
+    <PropertyGroup Label="Package Details">
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+
+        <Title>Hussy.Net</Title>
+        <Company>tacosontitan</Company>
+        <Authors>tacosontitan</Authors>
+        <Copyright>Copyright © 2023 tacosontitan and contibutors</Copyright>
+        <Description>
+            A minified dialect of .NET languages designed with code golf in mind.
+        </Description>
+        <PackageIcon>logo-round.png</PackageIcon>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageLicenseFile>LICENSE</PackageLicenseFile>
+        <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+        <PackageProjectUrl>https://github.com/tacosontitan/Hussy.Net</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/tacosontitan/Hussy.Net</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Content Include="..\..\README.md">
+            <Link>README.md</Link>
+        </Content>
+    </ItemGroup>
 </Project>

@@ -12,6 +12,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Glitter" Version="2024.3.1.1" />
+        <PackageReference Include="Glitter" />
+        <PackageReference Include="SuperLinq" />
     </ItemGroup>
 </Project>
