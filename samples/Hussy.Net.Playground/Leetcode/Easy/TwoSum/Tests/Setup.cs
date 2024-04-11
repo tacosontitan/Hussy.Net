@@ -14,7 +14,8 @@ public sealed partial class TwoSum
         DryRun,
         GolfedDryRun,
         ComplexityRun,
-        GolfedComplexityRun
+        GolfedComplexityRun,
+        HussyDryRun
     ];
     
     /// <summary>
