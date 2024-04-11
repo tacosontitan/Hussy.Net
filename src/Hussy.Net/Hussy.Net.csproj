@@ -8,8 +8,8 @@
     </PropertyGroup>
 
     <PropertyGroup Label="Package Details">
-        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+        <GenerateDocumentationFile>false</GenerateDocumentationFile>
 
         <Title>Hussy.Net</Title>
         <Company>tacosontitan</Company>
@@ -30,6 +30,9 @@
     <ItemGroup>
         <Content Include="..\..\README.md">
             <Link>README.md</Link>
+        </Content>
+        <Content Include="..\..\LICENSE">
+            <Link>LICENSE</Link>
         </Content>
     </ItemGroup>
 </Project>
