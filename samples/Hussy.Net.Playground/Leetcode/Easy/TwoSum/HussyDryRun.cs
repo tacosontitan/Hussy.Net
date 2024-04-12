@@ -16,6 +16,9 @@ public sealed partial class TwoSum
     /// <returns>
     ///     The two indices of the numbers which add up to the <paramref name="t"/>.
     /// </returns>
+    /// <remarks>
+    ///     Fully condensed, this method body becomes <c>55</c> bytes.
+    /// </remarks>
     private static IEnumerable<int>? HussyDryRun(
         int[] n,
         int t) =>
