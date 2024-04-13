@@ -1,24 +1,21 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-    
+
     <PropertyGroup Label="Release Details">
         <Version>1.0.0-preview-1</Version>
-        <PackageReleaseNotes>
-            Initial release.
-        </PackageReleaseNotes>
+        <PackageReleaseNotes>Initial release.</PackageReleaseNotes>
     </PropertyGroup>
 
     <PropertyGroup Label="Package Details">
-        <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-        <GenerateDocumentationFile>false</GenerateDocumentationFile>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
 
         <Title>Hussy.Net</Title>
         <Company>tacosontitan</Company>
         <Authors>tacosontitan</Authors>
         <Copyright>Copyright © 2023 tacosontitan and contibutors</Copyright>
-        <Description>
-            A minified dialect of .NET languages designed with code golf in mind.
-        </Description>
-        <PackageIcon>logo-round.png</PackageIcon>
+        <Description>A minified dialect of .NET languages designed with code golf in mind.</Description>
+        <PackageTags>code;golf;hussy;dot;net;esoteric;linq;extensions</PackageTags>
+        <PackageIcon>logo.png</PackageIcon>
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageLicenseFile>LICENSE</PackageLicenseFile>
         <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
@@ -27,12 +24,10 @@
         <RepositoryType>git</RepositoryType>
     </PropertyGroup>
 
-    <ItemGroup>
-        <Content Include="..\..\README.md">
-            <Link>README.md</Link>
-        </Content>
-        <Content Include="..\..\LICENSE">
-            <Link>LICENSE</Link>
-        </Content>
+    <ItemGroup Label="Resources">
+        <Content Link="README.md"  Pack="true" PackagePath="\" Include="..\..\README.md"/>
+        <Content Link="LICENSE" Pack="true" PackagePath="\" Include="..\..\LICENSE"/>
+        <None Pack="true" PackagePath="\" Include="..\..\resources\assets\logo.png"/>
     </ItemGroup>
+    
 </Project>
