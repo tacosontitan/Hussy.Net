@@ -1,4 +1,4 @@
-﻿namespace Hussy.Net.Playground.Leetcode.Easy.Palindrome;
+﻿namespace Hussy.Net.Playground.Leetcode.Easy;
 
 /// <summary>
 /// Represents a solution and its tests for the leetcode palindrome problem.
