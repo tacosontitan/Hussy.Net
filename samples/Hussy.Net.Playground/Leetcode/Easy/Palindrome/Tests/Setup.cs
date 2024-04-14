@@ -8,7 +8,8 @@ public sealed partial class Palindrome
     private static TestFunction[] TestFunctions =>
     [
         DryRun,
-        GolfedDryRun
+        GolfedDryRun,
+        GolfedDryRunV2
     ];
 
     /// <summary>
