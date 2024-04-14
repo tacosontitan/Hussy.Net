@@ -11,13 +11,13 @@ public sealed partial class C272452
     /// </returns>
     private static IEnumerable<string> DryRun(int target)
     {
-        for (int i = 1; i <= target; i++)
+        for (var i = 1; i <= target; i++)
         {
             string element = null;
-            for (int j = i; j % 3 == 0; j /= 3)
+            for (var fizz = i; fizz % 3 == 0; fizz /= 3)
                 element += "Fizz";
 
-            for (int j = i; j % 5 == 0; j /= 5)
+            for (var buzz = i; buzz % 5 == 0; buzz /= 5)
                 element += "Buzz";
 
             if (i % 3 != 0 && i % 5 != 0)
