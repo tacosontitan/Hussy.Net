@@ -34,5 +34,9 @@ public sealed partial class C272452
     ///         </list>
     ///     </para>
     /// </summary>
+    /// <param name="target">The stopping value for the test.</param>
+    /// <returns>
+    ///     A collection of strings representing the output for the specified <paramref name="target"/>.
+    /// </returns>
     private delegate IEnumerable<string> TestFunction(int target);
 }
