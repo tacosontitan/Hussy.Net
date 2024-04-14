@@ -4,7 +4,8 @@ public sealed partial class Palindrome
 {
     private static TestFunction[] TestFunctions =>
     [
-        DryRun
+        DryRun,
+        GolfedDryRun
     ];
 
     private static void RunTest(
