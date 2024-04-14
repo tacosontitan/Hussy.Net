@@ -14,7 +14,7 @@ public sealed partial class C272452
     /// </remarks>
     private static IEnumerable<string> GolfedDryRun(int t)
     {
-        for (int i = 1; i <= t; i++)
+        for (var i = 1; i <= t; i++)
         {
             int f = i, b = i;
             string element = null;
