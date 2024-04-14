@@ -6,7 +6,7 @@ public sealed partial class C272452
     public void TestCaseOne_Passes()
     {
         const int target = 2;
-        string[] expectedResults = ["0", "1", "2"];
+        string[] expectedResults = ["1", "2"];
         RunTests(expectedResults, target);
     }
 }

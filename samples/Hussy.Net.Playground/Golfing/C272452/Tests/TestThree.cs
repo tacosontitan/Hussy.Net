@@ -8,8 +8,8 @@ public sealed partial class C272452
         const int target = 6;
         string[] expectedResults =
         [
-            "0", "1", "2", "Fizz",
-            "4", "Buzz", "FizzFizz"
+            "1", "2", "Fizz",
+            "4", "Buzz", "Fizz"
         ];
         
         RunTests(expectedResults, target);
