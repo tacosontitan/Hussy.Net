@@ -2,6 +2,14 @@
 
 public sealed partial class Palindrome
 {
+    /// <summary>
+    ///     The initial golf run simply compresses the dry run.
+    /// </summary>
+    /// <param name="i">The input value to evaluate.</param>
+    /// <returns>
+    ///     <see langword="true"/> if the input is a palindrome;
+    ///     otherwise, <see langword="false"/>.
+    /// </returns>
     private static bool GolfedDryRun(int i)
     {
         if (i < 0)
