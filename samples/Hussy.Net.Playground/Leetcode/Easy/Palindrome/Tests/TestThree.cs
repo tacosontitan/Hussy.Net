@@ -6,6 +6,6 @@ public sealed partial class Palindrome
     public void TestCaseThree_Passes()
     {
         const int input = 10;
-        RunTest(expectedResult: true, input);
+        RunTest(expectedResult: false, input);
     }
 }
