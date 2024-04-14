@@ -5,7 +5,7 @@ public sealed partial class C272452
     /// <summary>
     /// The golfed run simply compresses the dry run.
     /// </summary>
-    /// <param name="target">The stopping value for the test.</param>
+    /// <param name="t">The stopping value for the test.</param>
     /// <returns>
     ///     A collection of strings representing the output for the specified <paramref name="target"/>.
     /// </returns>
