@@ -4,7 +4,7 @@
 /// Represents a solution and its tests for the leetcode palindrome problem.
 /// </summary>
 /// <see href="https://leetcode.com/problems/palindrome-number/description/"/>
-public sealed partial class Overview
+public sealed partial class Palindrome
 {
     /// <summary>
     ///     Given an integer <paramref name="input"/>, return <see langword="true"/>
