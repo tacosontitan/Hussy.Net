@@ -1,6 +1,6 @@
 ﻿namespace Hussy.Net.Playground.Leetcode.Easy;
 
-public sealed partial class Overview
+public sealed partial class Palindrome
 {
     private static TestFunction[] TestFunctions =>
     [
