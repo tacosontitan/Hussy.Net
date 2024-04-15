@@ -27,4 +27,29 @@ public static partial class Hussy
     /// <param name="value">The value to write.</param>
     public static void W<T>(T value) =>
         Console.WriteLine(value);
+
+    /// <summary>
+    ///     Writes the specified <paramref name="primaryValue"/> if it is not
+    ///     <see langword="null"/>; otherwise, the specified <paramref name="fallbackValue"/>
+    ///     is written. In both scenarios the value written is followed by the current
+    ///     line terminator.
+    /// </summary>
+    /// <param name="primaryValue">The primary value to write.</param>
+    /// <param name="fallbackValue">
+    ///     The value to write if the <paramref name="primaryValue"/> is <see langword="null"/>.
+    /// </param>
+    /// <typeparam name="TPrimary">Specifies the type of the primary value to write.</typeparam>
+    /// <typeparam name="TFallback">Specifies the type of the fallback value to write.</typeparam>
+    public static void W<TPrimary, TFallback>(
+        TPrimary primaryValue,
+        TFallback fallbackValue)
+    {
+        if (primaryValue is not null)
+        {
+            Console.WriteLine(primaryValue);
+            return;
+        }
+        
+        Console.WriteLine(fallbackValue);
+    }
 }
