@@ -12,7 +12,7 @@ public static partial class Hussy
     /// <param name="source">The source collection.</param>
     /// <param name="action">The action to be applied to each element.</param>
     /// <returns>The source collection.</returns>
-    public static IEnumerable<T> E<T>(
+    public static IEnumerable<T> Ec<T>(
         this IEnumerable<T> source,
         Action<int, int, int, T> action)
     {
