@@ -5,7 +5,8 @@ public sealed partial class C272452
     private static TestFunction[] TestFunctions =>
     [
         DryRun,
-        GolfedDryRun
+        GolfedDryRun,
+        HussyDryRun
     ];
 
     private static void RunTests(
