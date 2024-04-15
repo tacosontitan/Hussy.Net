@@ -37,4 +37,124 @@ public static partial class Hussy
 
         return true;
     }
+
+    /// <summary>
+    /// Determines whether the specified value is evenly divisible by <c>1</c>.
+    /// </summary>
+    /// <param name="value">The value to check for visibility.</param>
+    /// <returns>
+    ///     <see langword="true"/> if <paramref name="value"/> is
+    ///     evenly divisible by <c>1</c>; otherwise,
+    ///     <see langword="false"/>.
+    /// </returns>
+    public static bool Md1(int value) =>
+        value % 1 == 0;
+    
+    /// <summary>
+    /// Determines whether the specified value is evenly divisible by <c>2</c>.
+    /// </summary>
+    /// <param name="value">The value to check for visibility.</param>
+    /// <returns>
+    ///     <see langword="true"/> if <paramref name="value"/> is
+    ///     evenly divisible by <c>2</c>; otherwise,
+    ///     <see langword="false"/>.
+    /// </returns>
+    public static bool Md2(int value) =>
+        value % 2 == 0;
+    
+    /// <summary>
+    /// Determines whether the specified value is evenly divisible by <c>3</c>.
+    /// </summary>
+    /// <param name="value">The value to check for visibility.</param>
+    /// <returns>
+    ///     <see langword="true"/> if <paramref name="value"/> is
+    ///     evenly divisible by <c>3</c>; otherwise,
+    ///     <see langword="false"/>.
+    /// </returns>
+    public static bool Md3(int value) =>
+        value % 3 == 0;
+    
+    /// <summary>
+    /// Determines whether the specified value is evenly divisible by <c>4</c>.
+    /// </summary>
+    /// <param name="value">The value to check for visibility.</param>
+    /// <returns>
+    ///     <see langword="true"/> if <paramref name="value"/> is
+    ///     evenly divisible by <c>4</c>; otherwise,
+    ///     <see langword="false"/>.
+    /// </returns>
+    public static bool Md4(int value) =>
+        value % 4 == 0;
+    
+    /// <summary>
+    /// Determines whether the specified value is evenly divisible by <c>5</c>.
+    /// </summary>
+    /// <param name="value">The value to check for visibility.</param>
+    /// <returns>
+    ///     <see langword="true"/> if <paramref name="value"/> is
+    ///     evenly divisible by <c>5</c>; otherwise,
+    ///     <see langword="false"/>.
+    /// </returns>
+    public static bool Md5(int value) =>
+        value % 5 == 0;
+    
+    /// <summary>
+    /// Determines whether the specified value is evenly divisible by <c>6</c>.
+    /// </summary>
+    /// <param name="value">The value to check for visibility.</param>
+    /// <returns>
+    ///     <see langword="true"/> if <paramref name="value"/> is
+    ///     evenly divisible by <c>6</c>; otherwise,
+    ///     <see langword="false"/>.
+    /// </returns>
+    public static bool Md6(int value) =>
+        value % 6 == 0;
+    
+    /// <summary>
+    /// Determines whether the specified value is evenly divisible by <c>7</c>.
+    /// </summary>
+    /// <param name="value">The value to check for visibility.</param>
+    /// <returns>
+    ///     <see langword="true"/> if <paramref name="value"/> is
+    ///     evenly divisible by <c>7</c>; otherwise,
+    ///     <see langword="false"/>.
+    /// </returns>
+    public static bool Md7(int value) =>
+        value % 7 == 0;
+    
+    /// <summary>
+    /// Determines whether the specified value is evenly divisible by <c>8</c>.
+    /// </summary>
+    /// <param name="value">The value to check for visibility.</param>
+    /// <returns>
+    ///     <see langword="true"/> if <paramref name="value"/> is
+    ///     evenly divisible by <c>8</c>; otherwise,
+    ///     <see langword="false"/>.
+    /// </returns>
+    public static bool Md8(int value) =>
+        value % 8 == 0;
+    
+    /// <summary>
+    /// Determines whether the specified value is evenly divisible by <c>9</c>.
+    /// </summary>
+    /// <param name="value">The value to check for visibility.</param>
+    /// <returns>
+    ///     <see langword="true"/> if <paramref name="value"/> is
+    ///     evenly divisible by <c>9</c>; otherwise,
+    ///     <see langword="false"/>.
+    /// </returns>
+    public static bool Md9(int value) =>
+        value % 9 == 0;
+    
+    /// <summary>
+    /// Determines whether the specified value is evenly divisible by <c>10</c>.
+    /// </summary>
+    /// <param name="value">The value to check for visibility.</param>
+    /// <returns>
+    ///     <see langword="true"/> if <paramref name="value"/> is
+    ///     evenly divisible by <c>10</c>; otherwise,
+    ///     <see langword="false"/>.
+    /// </returns>
+    public static bool Md10(int value) =>
+        value % 10 == 0;
 }
