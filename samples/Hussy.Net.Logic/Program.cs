@@ -35,4 +35,4 @@ Gr(10).F(Od).E(W);
 // is divisible by all the specified operands.
 Wh("Modulus");
 Ws();
-Gr(100).F(x => x.Md(3, 5)).E(W);
+Gr(100).F(x => x.Dvb(3, 5)).E(W);

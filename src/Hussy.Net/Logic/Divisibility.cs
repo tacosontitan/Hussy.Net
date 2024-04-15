@@ -29,7 +29,7 @@ public static partial class Hussy
     /// <returns>
     /// <c>true</c> if the value is divisible by all the operands; otherwise, <c>false</c>.
     /// </returns>
-    public static bool Md(this int value, params int[] operands)
+    public static bool Dvb(this int value, params int[] operands)
     {
         foreach (int operand in operands)
             if (value % operand != 0)
@@ -47,7 +47,7 @@ public static partial class Hussy
     ///     evenly divisible by <c>1</c>; otherwise,
     ///     <see langword="false"/>.
     /// </returns>
-    public static bool Md1(int value) =>
+    public static bool Dvb1(int value) =>
         value % 1 == 0;
     
     /// <summary>
@@ -59,7 +59,7 @@ public static partial class Hussy
     ///     evenly divisible by <c>2</c>; otherwise,
     ///     <see langword="false"/>.
     /// </returns>
-    public static bool Md2(int value) =>
+    public static bool Dvb2(int value) =>
         value % 2 == 0;
     
     /// <summary>
@@ -71,7 +71,7 @@ public static partial class Hussy
     ///     evenly divisible by <c>3</c>; otherwise,
     ///     <see langword="false"/>.
     /// </returns>
-    public static bool Md3(int value) =>
+    public static bool Dvb3(int value) =>
         value % 3 == 0;
     
     /// <summary>
@@ -83,7 +83,7 @@ public static partial class Hussy
     ///     evenly divisible by <c>4</c>; otherwise,
     ///     <see langword="false"/>.
     /// </returns>
-    public static bool Md4(int value) =>
+    public static bool Dvb4(int value) =>
         value % 4 == 0;
     
     /// <summary>
@@ -95,7 +95,7 @@ public static partial class Hussy
     ///     evenly divisible by <c>5</c>; otherwise,
     ///     <see langword="false"/>.
     /// </returns>
-    public static bool Md5(int value) =>
+    public static bool Dvb5(int value) =>
         value % 5 == 0;
     
     /// <summary>
@@ -107,7 +107,7 @@ public static partial class Hussy
     ///     evenly divisible by <c>6</c>; otherwise,
     ///     <see langword="false"/>.
     /// </returns>
-    public static bool Md6(int value) =>
+    public static bool Dvb6(int value) =>
         value % 6 == 0;
     
     /// <summary>
@@ -119,7 +119,7 @@ public static partial class Hussy
     ///     evenly divisible by <c>7</c>; otherwise,
     ///     <see langword="false"/>.
     /// </returns>
-    public static bool Md7(int value) =>
+    public static bool Dvb7(int value) =>
         value % 7 == 0;
     
     /// <summary>
@@ -131,7 +131,7 @@ public static partial class Hussy
     ///     evenly divisible by <c>8</c>; otherwise,
     ///     <see langword="false"/>.
     /// </returns>
-    public static bool Md8(int value) =>
+    public static bool Dvb8(int value) =>
         value % 8 == 0;
     
     /// <summary>
@@ -143,7 +143,7 @@ public static partial class Hussy
     ///     evenly divisible by <c>9</c>; otherwise,
     ///     <see langword="false"/>.
     /// </returns>
-    public static bool Md9(int value) =>
+    public static bool Dvb9(int value) =>
         value % 9 == 0;
     
     /// <summary>
@@ -155,6 +155,6 @@ public static partial class Hussy
     ///     evenly divisible by <c>10</c>; otherwise,
     ///     <see langword="false"/>.
     /// </returns>
-    public static bool Md10(int value) =>
+    public static bool Dvb10(int value) =>
         value % 10 == 0;
 }

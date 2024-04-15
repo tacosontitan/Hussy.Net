@@ -18,8 +18,8 @@ public sealed partial class C272452
         Gr(t).E(i =>
         {
             string e = null;
-            F(i, Md3, Dv3, _ => e += "Fizz");
-            F(i, Md5, Dv5, _ => e += "Buzz");
+            F(i, Dvb3, Dv3, _ => e += "Fizz");
+            F(i, Dvb3, Dv5, _ => e += "Buzz");
             results.Add(e ?? i.Ts());
         });
 
