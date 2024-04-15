@@ -39,7 +39,7 @@ public static partial class Hussy
     /// </param>
     /// <typeparam name="TPrimary">Specifies the type of the primary value to write.</typeparam>
     /// <typeparam name="TFallback">Specifies the type of the fallback value to write.</typeparam>
-    public static void A<TPrimary, TFallback>(
+    public static void Af<TPrimary, TFallback>(
         TPrimary primaryValue,
         TFallback fallbackValue)
     {
