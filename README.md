@@ -1,11 +1,11 @@
 ﻿# 💃 Hussy.Net
 
-Hussy.Net is an esoteric programming language designed for and by C# developers with code golf in mind. It is a minified adaptation of the C# programming language leveraging modern features for clean and concise code.
+Hussy.Net is an esoteric dialect of .NET designed for and by C# developers with code golf in mind. It leverages modern features of .NET for clean and concise code, making it an ideal choice for code golfing challenges within the .NET ecosystem.
 
 ![License](https://img.shields.io/github/license/tacosontitan/Hussy.Net?logo=github&style=for-the-badge)
 
 > [!IMPORTANT]
-> Hussy.Net is not designed to compete with other golfing languages, but rather to allow C# developers to participate in golfing challenges with a leg to stand on.
+> Hussy.Net is not designed to compete with other golfing languages, but rather to provide a familiar environment for C# developers to participate in golfing challenges.
 
 ## 🚀 Getting Started
 
