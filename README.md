@@ -32,7 +32,7 @@ W("Hello, world!");
 
 ### ✅ Small changes, continuously integrated
 
-Glitter employs workflows for continuous integration to ensure the repository is held to industry standards; here's the
+Hussy.Net employs workflows for continuous integration to ensure the repository is held to industry standards; here's the
 current state of those workflows:
 
 ![.NET Workflow](https://img.shields.io/github/actions/workflow/status/tacosontitan/Hussy.Net/build.yml?label=Build%20and%20Test&logo=dotnet&style=for-the-badge)
