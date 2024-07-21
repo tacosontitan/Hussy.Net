@@ -42,15 +42,15 @@ public class DivisionTests
         
         static Func<double, double> GetFunction(double target) => target switch
         {
-            2 => Dv2,
-            3 => Dv3,
-            4 => Dv4,
-            5 => Dv5,
-            6 => Dv6,
-            7 => Dv7,
-            8 => Dv8,
-            9 => Dv9,
-            10 => Dv10
+            2 => Div2,
+            3 => Div3,
+            4 => Div4,
+            5 => Div5,
+            6 => Div6,
+            7 => Div7,
+            8 => Div8,
+            9 => Div9,
+            10 => Div10
         };
         
 #pragma warning restore CS8509 // The switch expression does not handle all possible values of its input type (it is not exhaustive).

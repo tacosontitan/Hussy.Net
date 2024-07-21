@@ -29,7 +29,7 @@ public static partial class Hussy
     ///     The specified <paramref name="input"/> divided by <c>2</c>.
     /// </returns>
     /// <remarks>This method is designed to shorten functions being passed as delegates.</remarks>
-    public static T Dv2<T>(T input)
+    public static T Div2<T>(T input)
         where T : IDivisionOperators<T, T, T> =>
         input / 2.To<T>();
 
@@ -42,7 +42,7 @@ public static partial class Hussy
     ///     The specified <paramref name="input"/> divided by <c>3</c>.
     /// </returns>
     /// <remarks>This method is designed to shorten functions being passed as delegates.</remarks>
-    public static T Dv3<T>(T input)
+    public static T Div3<T>(T input)
         where T : IDivisionOperators<T, T, T> =>
         input / 3.To<T>();
     
@@ -55,7 +55,7 @@ public static partial class Hussy
     ///     The specified <paramref name="input"/> divided by <c>4</c>.
     /// </returns>
     /// <remarks>This method is designed to shorten functions being passed as delegates.</remarks>
-    public static T Dv4<T>(T input)
+    public static T Div4<T>(T input)
         where T : IDivisionOperators<T, T, T> =>
         input / 4.To<T>();
     
@@ -68,7 +68,7 @@ public static partial class Hussy
     ///     The specified <paramref name="input"/> divided by <c>2</c>.
     /// </returns>
     /// <remarks>This method is designed to shorten functions being passed as delegates.</remarks>
-    public static T Dv5<T>(T input)
+    public static T Div5<T>(T input)
         where T : IDivisionOperators<T, T, T> =>
         input / 5.To<T>();
     
@@ -81,7 +81,7 @@ public static partial class Hussy
     ///     The specified <paramref name="input"/> divided by <c>6</c>.
     /// </returns>
     /// <remarks>This method is designed to shorten functions being passed as delegates.</remarks>
-    public static T Dv6<T>(T input)
+    public static T Div6<T>(T input)
         where T : IDivisionOperators<T, T, T> =>
         input / 6.To<T>();
     
@@ -94,7 +94,7 @@ public static partial class Hussy
     ///     The specified <paramref name="input"/> divided by <c>7</c>.
     /// </returns>
     /// <remarks>This method is designed to shorten functions being passed as delegates.</remarks>
-    public static T Dv7<T>(T input)
+    public static T Div7<T>(T input)
         where T : IDivisionOperators<T, T, T> =>
         input / 7.To<T>();
     
@@ -107,7 +107,7 @@ public static partial class Hussy
     ///     The specified <paramref name="input"/> divided by <c>8</c>.
     /// </returns>
     /// <remarks>This method is designed to shorten functions being passed as delegates.</remarks>
-    public static T Dv8<T>(T input)
+    public static T Div8<T>(T input)
         where T : IDivisionOperators<T, T, T> =>
         input / 8.To<T>();
     
@@ -120,7 +120,7 @@ public static partial class Hussy
     ///     The specified <paramref name="input"/> divided by <c>9</c>.
     /// </returns>
     /// <remarks>This method is designed to shorten functions being passed as delegates.</remarks>
-    public static T Dv9<T>(T input)
+    public static T Div9<T>(T input)
         where T : IDivisionOperators<T, T, T> =>
         input / 9.To<T>();
     
@@ -133,7 +133,7 @@ public static partial class Hussy
     ///     The specified <paramref name="input"/> divided by <c>10</c>.
     /// </returns>
     /// <remarks>This method is designed to shorten functions being passed as delegates.</remarks>
-    public static T Dv10<T>(T input)
+    public static T Div10<T>(T input)
         where T : IDivisionOperators<T, T, T> =>
         input / 10.To<T>();
 }
