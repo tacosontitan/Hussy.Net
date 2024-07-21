@@ -6,7 +6,8 @@ public sealed partial class C272452
     [
         DryRun,
         GolfedDryRun,
-        HussyDryRun
+        HussyDryRun,
+        HussyRun
     ];
 
     private static void RunTests(
