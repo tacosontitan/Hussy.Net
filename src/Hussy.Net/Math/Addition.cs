@@ -29,7 +29,7 @@ public static partial class Hussy
     ///     The specified <paramref name="input"/> incremented by <c>1</c>.
     /// </returns>
     /// <remarks>This method is designed to shorten functions being passed as delegates.</remarks>
-    public static T Ad1<T>(T input)
+    public static T Add1<T>(T input)
         where T : IAdditionOperators<T, T, T> =>
         input + 1.To<T>();
     
@@ -42,7 +42,7 @@ public static partial class Hussy
     ///     The specified <paramref name="input"/> incremented by <c>2</c>.
     /// </returns>
     /// <remarks>This method is designed to shorten functions being passed as delegates.</remarks>
-    public static T Ad2<T>(T input)
+    public static T Add2<T>(T input)
         where T : IAdditionOperators<T, T, T> =>
         input + 2.To<T>();
     
@@ -55,7 +55,7 @@ public static partial class Hussy
     ///     The specified <paramref name="input"/> incremented by <c>3</c>.
     /// </returns>
     /// <remarks>This method is designed to shorten functions being passed as delegates.</remarks>
-    public static T Ad3<T>(T input)
+    public static T Add3<T>(T input)
         where T : IAdditionOperators<T, T, T> =>
         input + 3.To<T>();
     
@@ -68,7 +68,7 @@ public static partial class Hussy
     ///     The specified <paramref name="input"/> incremented by <c>4</c>.
     /// </returns>
     /// <remarks>This method is designed to shorten functions being passed as delegates.</remarks>
-    public static T Ad4<T>(T input)
+    public static T Add4<T>(T input)
         where T : IAdditionOperators<T, T, T> =>
         input + 4.To<T>();
     
@@ -81,7 +81,7 @@ public static partial class Hussy
     ///     The specified <paramref name="input"/> incremented by <c>5</c>.
     /// </returns>
     /// <remarks>This method is designed to shorten functions being passed as delegates.</remarks>
-    public static T Ad5<T>(T input)
+    public static T Add5<T>(T input)
         where T : IAdditionOperators<T, T, T> =>
         input + 5.To<T>();
     
@@ -94,7 +94,7 @@ public static partial class Hussy
     ///     The specified <paramref name="input"/> incremented by <c>6</c>.
     /// </returns>
     /// <remarks>This method is designed to shorten functions being passed as delegates.</remarks>
-    public static T Ad6<T>(T input)
+    public static T Add6<T>(T input)
         where T : IAdditionOperators<T, T, T> =>
         input + 6.To<T>();
     
@@ -107,7 +107,7 @@ public static partial class Hussy
     ///     The specified <paramref name="input"/> incremented by <c>7</c>.
     /// </returns>
     /// <remarks>This method is designed to shorten functions being passed as delegates.</remarks>
-    public static T Ad7<T>(T input)
+    public static T Add7<T>(T input)
         where T : IAdditionOperators<T, T, T> =>
         input + 7.To<T>();
     
@@ -120,7 +120,7 @@ public static partial class Hussy
     ///     The specified <paramref name="input"/> incremented by <c>8</c>.
     /// </returns>
     /// <remarks>This method is designed to shorten functions being passed as delegates.</remarks>
-    public static T Ad8<T>(T input)
+    public static T Add8<T>(T input)
         where T : IAdditionOperators<T, T, T> =>
         input + 8.To<T>();
     
@@ -133,7 +133,7 @@ public static partial class Hussy
     ///     The specified <paramref name="input"/> incremented by <c>9</c>.
     /// </returns>
     /// <remarks>This method is designed to shorten functions being passed as delegates.</remarks>
-    public static T Ad9<T>(T input)
+    public static T Add9<T>(T input)
         where T : IAdditionOperators<T, T, T> =>
         input + 9.To<T>();
     
@@ -146,7 +146,7 @@ public static partial class Hussy
     ///     The specified <paramref name="input"/> incremented by <c>10</c>.
     /// </returns>
     /// <remarks>This method is designed to shorten functions being passed as delegates.</remarks>
-    public static T Ad10<T>(T input)
+    public static T Add10<T>(T input)
         where T : IAdditionOperators<T, T, T> =>
         input + 10.To<T>();
 }

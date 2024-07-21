@@ -43,16 +43,16 @@ public class AdditionTests
         
         static Func<double, double> GetFunction(double target) => target switch
         {
-            1 => Ad1,
-            2 => Ad2,
-            3 => Ad3,
-            4 => Ad4,
-            5 => Ad5,
-            6 => Ad6,
-            7 => Ad7,
-            8 => Ad8,
-            9 => Ad9,
-            10 => Ad10
+            1 => Add1,
+            2 => Add2,
+            3 => Add3,
+            4 => Add4,
+            5 => Add5,
+            6 => Add6,
+            7 => Add7,
+            8 => Add8,
+            9 => Add9,
+            10 => Add10
         };
         
 #pragma warning restore CS8509 // The switch expression does not handle all possible values of its input type (it is not exhaustive).
