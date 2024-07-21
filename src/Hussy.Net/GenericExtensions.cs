@@ -28,6 +28,8 @@ public static class GenericExtensions
     /// <param name="source">The value to convert.</param>
     /// <param name="provider">The provider to use when converting.</param>
     /// <returns>The converted value of type <typeparamref name="T"/>.</returns>
-    public static T To<T>(this object source, IFormatProvider? provider) =>
+    public static T To<T>(
+        this object source,
+        IFormatProvider? provider = null) =>
         (T)Convert.ChangeType(source, typeof(T), provider);
 }
