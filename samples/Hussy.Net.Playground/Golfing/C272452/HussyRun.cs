@@ -13,5 +13,5 @@ public sealed partial class C272452
     ///     The final result yields <c>100</c> bytes.
     /// </remarks>
     private static IEnumerable<string> HussyRun(int t) =>
-        Gr(t).M(i=>{string e=null;F(i,Dvb3,Dv3,_=>e+="Fizz");F(i,Dvb5,Dv5,_=>e+="Buzz");return e??i.Ts();});
+        Gr(t).M(i=>{string e=null;F(i,Dvb3,Div3,_=>e+="Fizz");F(i,Dvb5,Div5,_=>e+="Buzz");return e??i.Ts();});
 }
