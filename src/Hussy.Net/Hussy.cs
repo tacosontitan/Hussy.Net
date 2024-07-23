@@ -1,4 +1,4 @@
-﻿/*
+/*
    Copyright 2024 tacosontitan and contributors
 
    Licensed under the Apache License, Version 2.0 (the "License");
@@ -17,19 +17,7 @@
 namespace Hussy.Net;
 
 /// <summary>
-/// Contains extension methods for generic types.
+///     Defines condensed functions for logic, behaviors, and common operations
+///     within a golfing context.
 /// </summary>
-public static class GenericExtensions
-{
-    /// <summary>
-    /// Converts the given value to the specified type.
-    /// </summary>
-    /// <typeparam name="T">The type to convert the value to.</typeparam>
-    /// <param name="source">The value to convert.</param>
-    /// <param name="provider">The provider to use when converting.</param>
-    /// <returns>The converted value of type <typeparamref name="T"/>.</returns>
-    public static T To<T>(
-        this object source,
-        IFormatProvider? provider = null) =>
-        (T)Convert.ChangeType(source, typeof(T), provider);
-}
+public static partial class Hussy;

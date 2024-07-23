@@ -16,23 +16,17 @@
 
 namespace Hussy.Net;
 
-/// <summary>
-/// Defines an indexed value for simplifying working with collections.
-/// </summary>
-/// <typeparam name="T">Specifies the type of the value being indexed.</typeparam>
-/// <param name="index">Specifies the index of the element.</param>
-/// <param name="value">Specifies the value of the element.</param>
-public partial class Indexed<T>(
-    int index,
-    T value)
+public static partial class Hussy
 {
     /// <summary>
-    /// Gets or sets the index of this element.
+    /// Converts the given value to the specified type.
     /// </summary>
-    public int I { get; set; } = index;
-
-    /// <summary>
-    /// Gets or sets the value of this indexed element.
-    /// </summary>
-    public T V { get; set; } = value;
+    /// <typeparam name="T">The type to convert the value to.</typeparam>
+    /// <param name="source">The value to convert.</param>
+    /// <param name="provider">The provider to use when converting.</param>
+    /// <returns>The converted value of type <typeparamref name="T"/>.</returns>
+    public static T To<T>(
+        this object source,
+        IFormatProvider? provider = null) =>
+        (T)Convert.ChangeType(source, typeof(T), provider);
 }
