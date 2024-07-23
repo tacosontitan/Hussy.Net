@@ -34,7 +34,9 @@ public static partial class Hussy
     /// </summary>
     /// <param name="start">The starting number.</param>
     /// <param name="count">The number of values to print.</param>
-    public static void Fz(int start, int count) => Enumerable.Range(start, count)
+    public static void Fz(
+        int start,
+        int count) => Enumerable.Range(start, count)
         .ToList()
         .ForEach(PrintFizzBuzz);
 

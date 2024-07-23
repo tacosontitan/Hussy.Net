@@ -28,6 +28,8 @@ public static partial class Hussy
     /// <param name="source">The sequence to filter.</param>
     /// <param name="predicate">A function to test each element for a condition.</param>
     /// <returns>An IEnumerable{T} that contains elements from the input sequence that satisfy the condition.</returns>
-    public static IEnumerable<T> F<T>(this IEnumerable<T> source, Func<T, bool> predicate) =>
+    public static IEnumerable<T> F<T>(
+        this IEnumerable<T> source,
+        Func<T, bool> predicate) =>
         source.Where(predicate);
 }

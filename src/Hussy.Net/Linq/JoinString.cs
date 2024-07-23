@@ -1,4 +1,4 @@
-﻿/*
+/*
    Copyright 2024 tacosontitan and contributors
 
    Licensed under the Apache License, Version 2.0 (the "License");
@@ -22,14 +22,22 @@ namespace Hussy.Net;
 public static partial class Hussy
 {
     /// <summary>
-    /// Batches the specified <paramref name="source"/> sequence into chunks of the specified <paramref name="size"/>.
+    ///     Joins the elements of the specified <paramref name="source"/> sequence
+    ///     using the specified <paramref name="separator"/>.
     /// </summary>
-    /// <param name="source">Specifies the source sequence to batch.</param>
-    /// <param name="size">Specifies the size of the individual batches.</param>
-    /// <typeparam name="T">Specifies the type of the data in the <paramref name="source"/> sequence.</typeparam>
-    /// <returns>A collection of batches created from the specified <paramref name="source"/> sequence.</returns>
-    public static IEnumerable<IEnumerable<T>> B<T>(
+    /// <typeparam name="T">Specifies the type of data in the sequence.</typeparam>
+    /// <param name="source">The source sequence of elements to join together.</param>
+    /// <param name="separator">
+    ///     The separator that should be placed between each element; the default
+    ///     value is <c>, </c>.
+    /// </param>
+    /// <returns>
+    ///     The elements of the specified <paramref name="source"/> sequence
+    ///     joined in a <see cref="string"/> using the specified
+    ///     <paramref name="separator"/>.
+    /// </returns>
+    public static string Js<T>(
         this IEnumerable<T> source,
-        int size = 2) =>
-        source.Chunk(size);
+        string separator = ", ") =>
+        string.Join(separator, source);
 }

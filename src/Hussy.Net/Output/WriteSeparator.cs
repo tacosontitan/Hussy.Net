@@ -26,7 +26,9 @@ public static partial class Hussy
     /// </summary>
     /// <param name="character">The character used for the separator line. Default is '='.</param>
     /// <param name="length">The length of the separator line. Default is 25.</param>
-    public static void Ws(char character = '=', int length = 25)
+    public static void Ws(
+        char character = '=',
+        int length = 25)
     {
         var separator = new string(character, length);
         Console.WriteLine(separator);

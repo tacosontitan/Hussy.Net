@@ -25,8 +25,11 @@ public static partial class Hussy
     /// Generates a range of values starting with <c>1</c> through the specified <paramref name="count"/> value.
     /// </summary>
     /// <param name="count">The maximum value to include in the range.</param>
+    /// <param name="batchSize">Specifies the size of each batch.</param>
     /// <returns>A range of values starting with <c>1</c> through the specified <paramref name="count"/> value.</returns>
-    public static IEnumerable<IEnumerable<int>> Gbr(int count, int batchSize) =>
+    public static IEnumerable<IEnumerable<int>> Gbr(
+        int count,
+        int batchSize) =>
         Enumerable.Range(1, count).Chunk(batchSize);
 
     /// <summary>
@@ -34,8 +37,12 @@ public static partial class Hussy
     /// </summary>
     /// <param name="start">The starting value for the range.</param>
     /// <param name="count">The maximum value to include in the range.</param>
+    /// <param name="batchSize">Specifies the size of each batch.</param>
     /// <returns>A range of values starting with <paramref name="start"/> through the specified <paramref name="count"/> value.</returns>
-    public static IEnumerable<IEnumerable<int>> Gbr(int start, int count, int batchSize) =>
+    public static IEnumerable<IEnumerable<int>> Gbr(
+        int start,
+        int count,
+        int batchSize) =>
         Enumerable.Range(start, count).Chunk(batchSize);
 
     /// <summary>
@@ -44,8 +51,13 @@ public static partial class Hussy
     /// <param name="start">The starting value for the range.</param>
     /// <param name="count">The maximum value to include in the range.</param>
     /// <param name="stepSize">The step value to use when generating the range.</param>
+    /// <param name="batchSize">Specifies the size of each batch.</param>
     /// <returns>A range of values starting with <paramref name="start"/> through the specified <paramref name="count"/> value.</returns>
-    public static IEnumerable<IEnumerable<int>> Gbr(int start, int count, int stepSize, int batchSize)
+    public static IEnumerable<IEnumerable<int>> Gbr(
+        int start,
+        int count,
+        int stepSize,
+        int batchSize)
     {
         List<int> range = new(capacity: count);
         for (int i = 0; i < count; i++)

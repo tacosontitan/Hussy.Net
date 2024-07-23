@@ -28,7 +28,9 @@ public static partial class Hussy
     /// <param name="message">The message to display to the user.</param>
     /// <param name="formatProvider">The format provider to use for parsing the response. If null, the default format provider is used.</param>
     /// <returns>The parsed user's response of type T.</returns>
-    public static T P<T>(string message, IFormatProvider? formatProvider = null)
+    public static T P<T>(
+        string message,
+        IFormatProvider? formatProvider = null)
         where T : IParsable<T>
     {
         Console.Write(message);
