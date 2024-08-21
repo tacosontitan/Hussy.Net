@@ -33,7 +33,10 @@ public static partial class Hussy
     /// </returns>
     public static string Rev<T>(T input)
     {
-        var stringValue = input.ToString();
+        var stringValue = input?.ToString();
+        if (stringValue is null)
+            throw new ArgumentNullException(nameof(input), message: "Unable to reverse a null input.");
+
         var reversedSequence = stringValue.Reverse().ToArray();
         return new string(reversedSequence);
     }

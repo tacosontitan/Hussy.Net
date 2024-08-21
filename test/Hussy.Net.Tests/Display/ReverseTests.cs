@@ -14,6 +14,8 @@
    limitations under the License.
 */
 
+using System.Security.Cryptography;
+
 namespace Hussy.Net.Tests.Display;
 
 public class ReverseTests
@@ -26,5 +28,17 @@ public class ReverseTests
 
         const string expectation = "cba";
         Assert.Equal(expectation, reversal);
+    }
+
+    [Fact]
+    public void Reverse_NullInput_ThrowsArgumentNullException()
+    {
+        Assert.Throws<ArgumentNullException>(TestInvocation);
+
+        static void TestInvocation()
+        {
+            const string? testValue = null;
+            _ = Rev(testValue!);
+        }
     }
 }
