@@ -19,32 +19,32 @@ namespace Hussy.Net.Tests.Generators;
 public class RangeTests
 {
     [Fact]
-    public void GR_SingleParam_Generates_Correct_Range()
+    public void GenerateRange_WithValidCount_ReturnsCorrectRange()
     {
         var count = 5;
-        var result = Gr(count);
-        Assert.Equal(Enumerable.Range(1, count), result);
+        var actualResult = Gr(count);
+        var expectedResult = Enumerable.Range(1, count);
+        Assert.Equal(expectedResult, actualResult);
     }
 
     [Fact]
-    public void GR_TwoParams_Generates_Correct_Range()
+    public void GenerateRange_WithSpecifiedStartAndValidCount_ReturnsCorrectRange()
     {
         var start = 5;
         var count = 5;
-
-        var result = Gr(start, count);
-        Assert.Equal(Enumerable.Range(start, count), result);
+        var actualResult = Gr(start, count);
+        var expectedResult = Enumerable.Range(start, count);
+        Assert.Equal(expectedResult, actualResult);
     }
 
     [Fact]
-    public void GR_ThreeParams_Generates_Correct_Range()
+    public void GenerateRange_WithSpecifiedStartStepAndValidCount_ReturnsCorrectRange()
     {
         var start = 5;
         var count = 5;
         var step = 2;
-
-        var result = Gr(start, count, step);
-
-        Assert.Equal(new int[] { 5, 7, 9, 11, 13 }, result);
+        var actualResult = Gr(start, count, step);
+        var expectedResult = new int[] { 5, 7, 9, 11, 13 };
+        Assert.Equal(expectedResult, actualResult);
     }
 }
