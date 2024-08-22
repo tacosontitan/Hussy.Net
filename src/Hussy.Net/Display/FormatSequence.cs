@@ -35,7 +35,7 @@ public static partial class Hussy
     /// var sequence = Gr(5);
     ///
     /// // Create the formatted string:
-    /// var output = Far(sequence);
+    /// var output = Fsq(sequence);
     ///
     /// // Append the output to the output stream:
     /// A(output);
