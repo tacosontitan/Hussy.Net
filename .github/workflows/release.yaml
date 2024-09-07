@@ -1,0 +1,50 @@
+﻿name: "🚀 Release"
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: ✅ Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: 8.0.x
+
+      - name: 📦 Cache Packages
+        uses: actions/cache@v2
+        with:
+          path: |
+            ~/.nuget/packages
+            !~/.nuget/packages/**/content
+            !~/.nuget/packages/**/contentFiles
+          key: ${{ runner.os }}-dotnet-${{ hashFiles('**/packages.lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-dotnet-
+
+      - name: ⬇️ Restore Dependencies
+        run: dotnet restore
+
+      - name: 🏗️ Build
+        run: dotnet build -c Release --no-restore
+
+      - name: 🧪 Test
+        run: dotnet test -c Release --no-build --verbosity normal
+        
+      - name: 🎁 Package
+        run: dotnet pack -c Release --no-build --property:PackageOutputPath=../../nupkgs
+        
+      - name: ⬆️ Push to NuGet
+        run: dotnet nuget push "./nupkgs/*.nupkg" --source "https://api.nuget.org/v3/index.json" --api-key ${{ secrets.NUGET_PUBLISH_KEY }}
+
+      - name: 🎉 Create Release
+        uses: ncipollo/release-action@v1
+        with:
+          generateReleaseNotes: 'true'
+          makeLatest: 'true'
