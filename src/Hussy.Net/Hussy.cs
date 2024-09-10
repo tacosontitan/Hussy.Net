@@ -21,3 +21,5 @@ namespace Hussy.Net;
 ///     within a golfing context.
 /// </summary>
 public static partial class Hussy;
+
+// Just a test of auto-release.
