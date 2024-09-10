@@ -1,7 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup Label="Release Details">
-        <Version>1.0.0-preview-1</Version>
         <PackageReleaseNotes>Initial release.</PackageReleaseNotes>
     </PropertyGroup>
 
