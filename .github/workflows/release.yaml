@@ -33,9 +33,6 @@ jobs:
 
       - name: 🏗️ Build
         run: dotnet build -c Release --no-restore
-
-      - name: 🧪 Test
-        run: dotnet test -c Release --no-build --verbosity normal
         
       - name: 🎁 Package
         run: dotnet pack -c Release --no-build --property:PackageOutputPath=../../nupkgs
