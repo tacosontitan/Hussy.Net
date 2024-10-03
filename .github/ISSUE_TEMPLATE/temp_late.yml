@@ -1,0 +1,35 @@
+﻿name: 🚀 Completion Request
+description: If it's a request to complete support for a feature slated in the initial release, then you can use this.
+labels: [ enhancement,initial release,under review ]
+projects: [ "tacosontitan/10" ]
+body:
+  - type: input
+    id: feature
+    attributes: 
+      label: 🪪 Feature Name
+      description: What feature are you requesting to be completed?
+    validations:
+      required: true
+  - type: input
+    id: link
+    attributes:
+      label: 🌐 Implementation Link
+      description: If there's an existing implementation, please provide a link.
+  - type: textarea
+    id: description
+    attributes:
+      label: 📝 Description
+      description: Please provide a brief description of the intended behavior for the feature.
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: |
+        ## ✅ Definition of Done
+        
+        The checklist below represents the requirements for this feature to be considered complete from a high level:
+        
+        - [ ] Default Implementation
+        - [ ] XML Documentation
+        - [ ] Unit Test Coverage
+        - [ ] Code Analysis (Common Use Cases)
