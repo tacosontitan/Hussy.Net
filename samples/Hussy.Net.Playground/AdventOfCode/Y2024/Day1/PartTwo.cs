@@ -7,6 +7,7 @@ public sealed partial class DayOne
     {
         const int expectedResult = 31;
         RunTest(expectedResult, Datasets.DayOnePartTwoExampleLists, PartTwoDryRun);
+        RunTest(expectedResult, Datasets.DayOnePartTwoExampleLists, PartTwoLinqRun);
     }
 
     [Fact]
@@ -14,6 +15,7 @@ public sealed partial class DayOne
     {
         const int expectedResult = 20_719_933;
         RunTest(expectedResult, Datasets.DayOneLists, PartTwoDryRun);
+        RunTest(expectedResult, Datasets.DayOneLists, PartTwoLinqRun);
     }
 
     private static int PartTwoDryRun(
@@ -29,4 +31,9 @@ public sealed partial class DayOne
 
         return result;
     }
+
+    public static int PartTwoLinqRun(
+        IEnumerable<int> leftList,
+        IEnumerable<int> rightList) =>
+        leftList.Select(left => rightList.Count(left.Equals) * left).Sum();
 }
