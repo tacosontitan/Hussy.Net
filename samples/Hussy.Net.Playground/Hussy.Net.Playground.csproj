@@ -27,4 +27,19 @@
       <ProjectReference Include="..\..\src\Hussy.Net\Hussy.Net.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <EmbeddedResource Update="AdventOfCode\Y2024\Datasets.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>Datasets.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="AdventOfCode\Y2024\Datasets.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>Datasets.resx</DependentUpon>
+      </Compile>
+    </ItemGroup>
+
 </Project>
