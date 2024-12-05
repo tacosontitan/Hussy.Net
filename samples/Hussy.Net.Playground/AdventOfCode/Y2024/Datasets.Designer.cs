@@ -60,20 +60,6 @@ namespace Hussy.Net.Playground.AdventOfCode.Y2024 {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 3   4
-        ///4   3
-        ///2   5
-        ///1   3
-        ///3   9
-        ///3   3.
-        /// </summary>
-        internal static string DayOneExampleLists {
-            get {
-                return ResourceManager.GetString("DayOneExampleLists", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to 35039   67568
         ///61770   80134
         ///64079   34668
@@ -113,6 +99,34 @@ namespace Hussy.Net.Playground.AdventOfCode.Y2024 {
         internal static string DayOneLists {
             get {
                 return ResourceManager.GetString("DayOneLists", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 3   4
+        ///4   3
+        ///2   5
+        ///1   3
+        ///3   9
+        ///3   3.
+        /// </summary>
+        internal static string DayOnePartOneExampleLists {
+            get {
+                return ResourceManager.GetString("DayOnePartOneExampleLists", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 3   4
+        ///4   3
+        ///2   5
+        ///1   3
+        ///3   9
+        ///3   3.
+        /// </summary>
+        internal static string DayOnePartTwoExampleLists {
+            get {
+                return ResourceManager.GetString("DayOnePartTwoExampleLists", resourceCulture);
             }
         }
     }
