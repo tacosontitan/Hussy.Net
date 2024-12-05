@@ -32,7 +32,7 @@ public sealed partial class DayOne
         return result;
     }
 
-    public static int PartTwoLinqRun(
+    private static int PartTwoLinqRun(
         IEnumerable<int> leftList,
         IEnumerable<int> rightList) =>
         leftList.Select(left => rightList.Count(left.Equals) * left).Sum();
