@@ -7,7 +7,7 @@ Hussy.Net is an esoteric dialect of .NET designed for and by C# developers with 
 > [!IMPORTANT]
 > Hussy.Net is not designed to compete with other golfing languages, but rather to provide a familiar environment for C# developers to participate in golfing challenges.
 
-## Origin Story
+## 🐣 Origin Story
 
 The name for the project stems from a moment amongst friends where the phonetics for pronouncing Hazel `heɪzəl` were sent with a typo from a broken keyboard as `hezə` which is very close to the phonetics for hussy `həzē` which gave everyone a good laugh. The project was nameless at the time but others where aware of it and proposed the name hussy as a running joke since many golfing languages have less than favorable names. After some time drawing blanks on the name, the name was adopted and officially became `Hussy.Net` to help golfers easily identify that it's built over the .NET ecosystem.
 
