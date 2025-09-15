@@ -19,6 +19,12 @@ namespace Hussy.Net;
 public static partial class Hussy
 {
     /// <summary>
+	/// Writes the current line terminator to the standard output stream.
+	/// </summary>
+    public static void W() =>
+        Console.WriteLine();
+
+    /// <summary>
     /// Writes the specified value, followed by the current line terminator, to the standard output stream.
     /// </summary>
     /// <param name="value">The value to write.</param>
@@ -46,7 +52,7 @@ public static partial class Hussy
             Console.WriteLine(primaryValue);
             return;
         }
-        
+
         Console.WriteLine(fallbackValue);
     }
 }
