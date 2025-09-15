@@ -25,3 +25,20 @@ Fz(count: 20);
 Wh("Default (starting at 5)");
 Ws();
 Fz(start: 5, count: 20);
+
+// For reference, you can also solve this problem with basic dialects:
+Wh("Basic Dialects");
+Ws();
+Gr(start: 5, count: 20).E(i =>
+{
+    if (Dvb3(i))
+        A("Fizz");
+
+    if (Dvb5(i))
+        A("Buzz");
+
+    if (!i.Dvb(3, 5))
+        A(i);
+
+    W();
+});
