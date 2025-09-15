@@ -53,6 +53,4 @@ curiosities:
 
 Hussy.Net is built with .NET developers in mind. It expands on the C# language directly, so all native C# features are available by default. In addition to the native features of C#, there are several features which can help you create concise snippets with ease:
 
-- Primitives
-- Output Methods
-- Complete Modules
+- TBD
