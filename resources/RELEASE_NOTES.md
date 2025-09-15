@@ -9,8 +9,6 @@ Hussy.Net is an esoteric programming language designed for and by C# developers 
 
 ## 🚀 Initial Release
 
-The initial release (version `2024.1.1.0`) includes the baseline offerings of Hussy.Net
+The initial release (version `1.0.0`) includes the baseline offerings of Hussy.Net:
 
-- Shortened Primitives
-- Common Methods
-- 
+- TBD
