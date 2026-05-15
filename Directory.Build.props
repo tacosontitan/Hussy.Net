@@ -15,4 +15,11 @@
         <PackageReference Include="Glitter" Version="2024.3.1.1" />
         <PackageReference Include="SuperLinq" Version="6.2.0" />
     </ItemGroup>
+
+    <ItemGroup Condition="'$(IsRoslynComponent)' != 'true' and Exists('$(MSBuildThisFileDirectory)src/Hussy.Net.Analyzers/Hussy.Net.Analyzers.csproj')">
+        <ProjectReference Include="$(MSBuildThisFileDirectory)src/Hussy.Net.Analyzers/Hussy.Net.Analyzers.csproj"
+                          OutputItemType="Analyzer"
+                          ReferenceOutputAssembly="false"
+                          PrivateAssets="all" />
+    </ItemGroup>
 </Project>

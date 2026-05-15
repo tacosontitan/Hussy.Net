@@ -29,4 +29,11 @@
         <None Pack="true" PackagePath="\" Include="..\..\resources\assets\logo.png"/>
     </ItemGroup>
 
+    <ItemGroup Label="Analyzer Distribution">
+        <None Include="..\Hussy.Net.Analyzers\bin\$(Configuration)\$(TargetFramework)\Hussy.Net.Analyzers.dll"
+              Pack="true"
+              PackagePath="analyzers/dotnet/cs"
+              Visible="false" />
+    </ItemGroup>
+
 </Project>

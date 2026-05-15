@@ -39,8 +39,9 @@
       <AdditionalFiles Remove="AnalyzerReleases.Unshipped.md" />
     </ItemGroup>
 
-    <ItemGroup>
-      <ProjectReference Include="..\Hussy.Net\Hussy.Net.csproj" />
-    </ItemGroup>
-    
+        <ItemGroup>
+            <Using Remove="Hussy.Net" />
+            <Using Remove="Hussy.Net.Hussy" />
+        </ItemGroup>
+
 </Project>
