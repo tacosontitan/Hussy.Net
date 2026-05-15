@@ -1,0 +1,128 @@
+name: "🚀 Release 📦"
+
+on:
+  push:
+    branches: [ "main" ]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    env:
+      PROJECT_PATH: src/Hussy.Net/Hussy.Net.csproj
+      PACKAGE_OUTPUT_PATH: ${{ runner.temp }}/nuget
+      NUGET_SOURCE: https://api.nuget.org/v3/index.json
+    steps:
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: ✅ Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+
+      - name: 🧮 Resolve Release Version
+        id: version
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          git fetch --tags --force
+          latest_tag="$(git tag --list 'v*' --sort=-v:refname | head -n 1)"
+          project_version="$(dotnet msbuild "$PROJECT_PATH" -nologo -getProperty:Version | tail -n 1 | tr -d '\r')"
+
+          if [ -z "$project_version" ]; then
+            echo "Unable to read project version from $PROJECT_PATH."
+            exit 1
+          fi
+
+          IFS='.' read -r project_major project_minor project_patch <<< "$project_version"
+          if [ -z "${project_major:-}" ] || [ -z "${project_minor:-}" ] || [ -z "${project_patch:-}" ]; then
+            echo "Project version '$project_version' is not in supported semver format <major>.<minor>.<patch>."
+            exit 1
+          fi
+
+          if [ -n "$latest_tag" ]; then
+            latest_version="${latest_tag#v}"
+            IFS='.' read -r major minor patch <<< "$latest_version"
+
+            if [ -z "${major:-}" ] || [ -z "${minor:-}" ] || [ -z "${patch:-}" ]; then
+              echo "Latest tag '$latest_tag' is not in supported semver format v<major>.<minor>.<patch>."
+              exit 1
+            fi
+
+            if [ "$latest_version" = "$project_version" ] || [ "$(printf '%s\n' "$latest_version" "$project_version" | sort -V | tail -n 1)" = "$latest_version" ]; then
+              version="$major.$minor.$((patch + 1))"
+            else
+              version="$project_version"
+            fi
+          else
+            version="$project_version"
+          fi
+
+          tag="v$version"
+
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+          echo "tag=$tag" >> "$GITHUB_OUTPUT"
+
+      - name: ⬇️ Restore Dependencies
+        run: dotnet restore
+
+      - name: 🏗️ Build Primary Project
+        run: dotnet build "$PROJECT_PATH" -c Release --no-restore
+
+      - name: 📦 Pack Primary Project
+        shell: bash
+        run: |
+          set -euo pipefail
+          dotnet pack "$PROJECT_PATH" \
+            -c Release \
+            --no-build \
+            -o "$PACKAGE_OUTPUT_PATH" \
+            -p:PackageVersion="${{ steps.version.outputs.version }}"
+
+      - name: 🔍 Validate Analyzer Packaging
+        id: package
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          package_path="$(find "$PACKAGE_OUTPUT_PATH" -maxdepth 1 -type f -name '*.nupkg' ! -name '*.snupkg' | head -n 1)"
+
+          if [ -z "$package_path" ]; then
+            echo "Unable to locate generated NuGet package."
+            exit 1
+          fi
+
+          if ! unzip -l "$package_path" | grep -q "analyzers/dotnet/cs/Hussy.Net.Analyzers.dll"; then
+            echo "NuGet package does not include the analyzer payload."
+            exit 1
+          fi
+
+          echo "path=$package_path" >> "$GITHUB_OUTPUT"
+
+      - name: 🧷 Create and Push Tag
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git tag -a "${{ steps.version.outputs.tag }}" -m "Release ${{ steps.version.outputs.tag }}"
+          git push origin "${{ steps.version.outputs.tag }}"
+
+      - name: 📢 Publish NuGet Package
+        run: dotnet nuget push "${{ steps.package.outputs.path }}" --api-key "${{ secrets.NUGET_API_KEY }}" --source "$NUGET_SOURCE"
+
+      - name: 🎉 Create GitHub Release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release create "${{ steps.version.outputs.tag }}" "${{ steps.package.outputs.path }}" \
+            --title "${{ steps.version.outputs.tag }}" \
+            --notes "Automated release for version ${{ steps.version.outputs.version }}."
