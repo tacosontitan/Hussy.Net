@@ -19,7 +19,7 @@ namespace Hussy.Net.Tests.Generators;
 public class RangeTests
 {
     [Fact]
-    public void GenerateRange_SingleParameter_ReturnsCorrectRange()
+    public void GenerateRange_CountParameter_ReturnsCorrectRange()
     {
         var count = 5;
         var actualResult = Gr(count);
