@@ -3,7 +3,7 @@
 <root>
     <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
         <xsd:element name="root" msdata:IsDataSet="true">
-            
+
         </xsd:element>
     </xsd:schema>
     <resheader name="resmimetype">
@@ -43,7 +43,7 @@
         <value>The 'Ts' method is a shorthand for 'ToString' that reduces verbosity.</value><comment>An optional longer localizable description of the diagnostic.</comment>
     </data>
     <data name="HN0001MessageFormat" xml:space="preserve">
-        <value>Use 'Ts()' instead of 'ToString()'</value><comment>The format-able message the diagnostic displays.</comment>
+        <value>Save 6 bytes with 'Ts()' instead of using 'ToString()'</value><comment>The format-able message the diagnostic displays.</comment>
     </data>
     <data name="HN0001Title" xml:space="preserve">
         <value>Use 'Ts' shorthand for 'ToString'</value><comment>The title of the diagnostic.</comment>
