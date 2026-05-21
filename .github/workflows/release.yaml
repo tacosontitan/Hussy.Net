@@ -42,7 +42,7 @@ jobs:
         run: |
           PACKAGE_VERSION="$(dotnet msbuild ./src/Hussy.Net/Hussy.Net.csproj -nologo -getProperty:Version)"
           if [ -z "${PACKAGE_VERSION}" ]; then
-            echo "Unable to resolve package version."
+            echo "Failed to resolve package version from ./src/Hussy.Net/Hussy.Net.csproj using MSBuild."
             exit 1
           fi
           echo "version=${PACKAGE_VERSION}" >> "$GITHUB_OUTPUT"
@@ -54,6 +54,6 @@ jobs:
         uses: ncipollo/release-action@v1
         with:
           tag: v${{ steps.package-version.outputs.version }}
-          allowUpdates: 'true'
-          generateReleaseNotes: 'true'
-          makeLatest: 'true'
+          allowUpdates: true
+          generateReleaseNotes: true
+          makeLatest: true
