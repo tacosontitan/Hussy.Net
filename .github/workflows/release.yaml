@@ -40,9 +40,11 @@ jobs:
       - name: 🏷️ Resolve Package Version
         id: package-version
         run: |
-          PACKAGE_FILE=$(basename "$(ls ./nupkgs/Hussy.Net.*.nupkg | head -n 1)")
-          PACKAGE_VERSION="${PACKAGE_FILE#Hussy.Net.}"
-          PACKAGE_VERSION="${PACKAGE_VERSION%.nupkg}"
+          PACKAGE_VERSION="$(dotnet msbuild ./src/Hussy.Net/Hussy.Net.csproj -nologo -getProperty:Version)"
+          if [ -z "${PACKAGE_VERSION}" ]; then
+            echo "Unable to resolve package version."
+            exit 1
+          fi
           echo "version=${PACKAGE_VERSION}" >> "$GITHUB_OUTPUT"
         
       - name: ⬆️ Push to NuGet
