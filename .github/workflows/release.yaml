@@ -8,6 +8,8 @@ on:
 jobs:
   build-and-release:
     runs-on: ubuntu-latest
+    env:
+      PACKAGE_PROJECT_PATH: ./src/Hussy.Net/Hussy.Net.csproj
     steps:
       - name: 📥 Checkout Repository
         uses: actions/checkout@v3
@@ -40,9 +42,9 @@ jobs:
       - name: 🏷️ Resolve Package Version
         id: package-version
         run: |
-          PACKAGE_VERSION="$(dotnet msbuild ./src/Hussy.Net/Hussy.Net.csproj -nologo -getProperty:Version)"
+          PACKAGE_VERSION="$(dotnet msbuild "${PACKAGE_PROJECT_PATH}" -nologo -getProperty:Version)"
           if [ -z "${PACKAGE_VERSION}" ]; then
-            echo "Failed to resolve package version from ./src/Hussy.Net/Hussy.Net.csproj using MSBuild."
+            echo "Failed to resolve package version from ${PACKAGE_PROJECT_PATH} using MSBuild." >&2
             exit 1
           fi
           echo "version=${PACKAGE_VERSION}" >> "$GITHUB_OUTPUT"
