@@ -45,7 +45,7 @@ jobs:
         run: |
           VERSION=$(grep '<Version>' Directory.Build.props | sed 's/.*<Version>\(.*\)<\/Version>.*/\1/')
           NOTES=$(awk -v version="$VERSION" '
-            $0 ~ ("^##[[:space:]]+(\\[" version "\\]|" version ")([[:space:]]|$)") { in_section=1; next }
+            /^##[[:space:]]/ && index($0, version) { in_section=1; next }
             in_section && /^##[[:space:]]/ { exit }
             in_section { print }
           ' resources/RELEASE_NOTES.md)
