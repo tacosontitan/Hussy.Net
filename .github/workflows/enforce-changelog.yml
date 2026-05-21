@@ -1,4 +1,4 @@
-name: "📝 Changelog Enforcer"
+name: "🔍 Enforce Changelog Requirements"
 
 on:
   pull_request:
@@ -19,7 +19,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: 🔍 Check Changelog Updated
+      - name: 🔍 Enforce Changelog Requirements
         uses: dangoslen/changelog-enforcer@v3
         with:
           changeLogPath: resources/RELEASE_NOTES.md
