@@ -1,0 +1,25 @@
+name: "📝 Changelog Enforcer"
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
+
+jobs:
+  changelog:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: 🔍 Check Changelog Updated
+        uses: dangoslen/changelog-enforcer@v3
+        with:
+          changeLogPath: resources/RELEASE_NOTES.md
+          skipLabels: |
+            skip-changelog
+            documentation
