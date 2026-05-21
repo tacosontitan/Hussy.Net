@@ -24,7 +24,7 @@ if ([string]::IsNullOrWhiteSpace($Token)) {
 }
 
 $headers = @{
-    Authorization = "Bearer $Token"
+    Authorization = "token $Token"
     Accept        = 'application/vnd.github+json'
     'X-GitHub-Api-Version' = '2022-11-28'
 }
@@ -185,7 +185,7 @@ foreach ($item in $featuresToCreate) {
     } | ConvertTo-Json -Depth 5
 
     if ($PSCmdlet.ShouldProcess($item.Title, 'Create GitHub issue')) {
-        $createdIssue = Invoke-RestMethod -Method Post -Uri "$baseUri/issues" -Headers $headers -Body $payload
+        $createdIssue = Invoke-RestMethod -Method Post -Uri "$baseUri/issues" -Headers $headers -Body $payload -ContentType 'application/json'
         Write-Host "Created #$($createdIssue.number): $($createdIssue.title)"
         [void]$existingTitles.Add($item.Title)
         $created++
