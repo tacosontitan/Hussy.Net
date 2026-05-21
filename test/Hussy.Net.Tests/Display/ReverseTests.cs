@@ -20,13 +20,13 @@ namespace Hussy.Net.Tests.Display;
 
 public class ReverseTests
 {
-    [Fact]
-    public void Reverse_ValidInput_ReversesInput()
+    [Theory]
+    [InlineData("abc", "cba")]
+    [InlineData("ABC", "CBA")]
+    [InlineData(123, "321")]
+    public void Reverse_ValidInput_ReversesInput(object testValue, string expectation)
     {
-        const string testValue = "abc";
         var reversal = Rev(testValue);
-
-        const string expectation = "cba";
         Assert.Equal(expectation, reversal);
     }
 
