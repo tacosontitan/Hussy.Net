@@ -7,6 +7,12 @@ Hussy.Net is an esoteric programming language designed for and by C# developers 
 > [!IMPORTANT]
 > Hussy.Net is not designed to compete with other golfing languages, but rather to allow C# developers to participate in golfing challenges with a leg to stand on.
 
+## 🤦🏻‍♀️ 2.0.0
+
+This release is a minor improvement upon the initial release in support of automated future releases. The following new features have also been added:
+
+- Code analyzer and fix for using `Ts` over `ToString`.
+
 ## 🚀 Initial Release
 
 The initial release (version `1.0.0`) includes the baseline offerings of Hussy.Net:
