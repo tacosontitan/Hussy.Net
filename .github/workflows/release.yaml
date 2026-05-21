@@ -36,6 +36,14 @@ jobs:
         
       - name: 🎁 Package
         run: dotnet pack -c Release --no-build --property:PackageOutputPath=../../nupkgs
+
+      - name: 🏷️ Resolve Package Version
+        id: package-version
+        run: |
+          PACKAGE_FILE=$(basename "$(ls ./nupkgs/Hussy.Net.*.nupkg | head -n 1)")
+          PACKAGE_VERSION="${PACKAGE_FILE#Hussy.Net.}"
+          PACKAGE_VERSION="${PACKAGE_VERSION%.nupkg}"
+          echo "version=${PACKAGE_VERSION}" >> "$GITHUB_OUTPUT"
         
       - name: ⬆️ Push to NuGet
         run: dotnet nuget push "./nupkgs/*.nupkg" --skip-duplicate --source "https://api.nuget.org/v3/index.json" --api-key ${{ secrets.NUGET_PUBLISH_KEY }}
@@ -43,6 +51,7 @@ jobs:
       - name: 🎉 Create Release
         uses: ncipollo/release-action@v1
         with:
-          tag: main-${{ github.run_number }}
+          tag: v${{ steps.package-version.outputs.version }}
+          allowUpdates: 'true'
           generateReleaseNotes: 'true'
           makeLatest: 'true'
