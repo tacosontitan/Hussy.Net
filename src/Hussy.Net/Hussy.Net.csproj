@@ -2,7 +2,6 @@
 
     <PropertyGroup Label="Release Details">
         <PackageReleaseNotes>Initial release.</PackageReleaseNotes>
-        <Version>1.0.0</Version>
     </PropertyGroup>
 
     <PropertyGroup Label="Package Details">
