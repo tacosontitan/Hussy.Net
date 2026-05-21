@@ -43,7 +43,16 @@ jobs:
       - name: 📖 Read Release Notes
         id: release-notes
         run: |
-          NOTES=$(sed -n '/^## 🚀/,/^## /p' resources/RELEASE_NOTES.md | head -n -1)
+          VERSION=$(grep '<Version>' Directory.Build.props | sed 's/.*<Version>\(.*\)<\/Version>.*/\1/')
+          NOTES=$(awk -v version="$VERSION" '
+            $0 ~ ("^##[[:space:]]+(\\[" version "\\]|" version ")([[:space:]]|$)") { in_section=1; next }
+            in_section && /^##[[:space:]]/ { exit }
+            in_section { print }
+          ' resources/RELEASE_NOTES.md)
+          if [ -z "$NOTES" ]; then
+            echo "Release notes section not found for version $VERSION" >&2
+            exit 1
+          fi
           echo "notes<<EOF" >> $GITHUB_OUTPUT
           echo "$NOTES" >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
