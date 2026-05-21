@@ -7,7 +7,64 @@ body:
     id: feature
     attributes: 
       label: 🪪 Feature Name
-      description: What feature are you requesting to be completed?
+      description: What single feature are you requesting to be completed or sunset reviewed?
+      placeholder: Use exactly one feature per issue.
+    validations:
+      required: true
+  - type: dropdown
+    id: track
+    attributes:
+      label: 🧭 Track
+      description: Is this issue for completion or sunset evaluation?
+      options:
+        - ✅ Completion
+        - ☀️ Sunset Evaluation
+    validations:
+      required: true
+  - type: dropdown
+    id: catalog
+    attributes:
+      label: 📚 Initial Release Feature Catalog
+      description: Select the feature this issue is for. Open separate issues for additional features.
+      options:
+        - Generate Batched Range
+        - To
+        - Prompt
+        - For
+        - Each
+        - Indexed Each
+        - Repeat
+        - First
+        - Indexed First
+        - Index Of
+        - Map
+        - Indexed Map
+        - Batch
+        - Filter
+        - Join String
+        - Unique
+        - Divisible By N
+        - Equals Reversal
+        - Even
+        - Odd
+        - Null
+        - Not Null
+        - Add N
+        - Subtract N
+        - Multiply By N
+        - Divide By N
+        - Fizz Buzz
+        - Hello World
+        - Palindrome
+        - Append
+        - Write Line
+        - Write Header
+        - Write Separator
+        - Indexed Primitive
+        - Cartesian Iterators
+        - Expressive LINQ Methods
+        - To String (Sunset Evaluation)
+        - Format Sequence (Sunset Evaluation)
     validations:
       required: true
   - type: input
