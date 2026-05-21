@@ -11,4 +11,11 @@ Hussy.Net is an esoteric programming language designed for and by C# developers 
 
 The initial release (version `1.0.0`) includes the baseline offerings of Hussy.Net:
 
-- TBD
+- Condensed static API surface exposed through the `Hussy` class for golf-friendly C# snippets.
+- Core math helpers for concise arithmetic and numeric transformations.
+- Logic helpers for common predicates such as parity, divisibility, null checks, and reversal-based comparisons.
+- Sequence and LINQ-style helpers for batching, filtering, de-duplication, and string joining.
+- Output helpers for streamlined console writing, separators, and simple header formatting.
+- Input helpers for typed console prompts using `IParsable<T>`.
+- Iteration helpers for repeat and loop-style workflows with minimal syntax overhead.
+- Included challenge-oriented modules and samples such as Hello World, FizzBuzz, and palindrome checks.
