@@ -11,7 +11,7 @@ Hussy.Net is an esoteric programming language designed for and by C# developers 
 
 - Updated dependency versions, including `coverlet.collector`, `JetBrains.Annotations`, `Microsoft.CodeAnalysis.Analyzers`, `Microsoft.CodeAnalysis.CSharp`, `Microsoft.CodeAnalysis.CSharp.Workspaces`, and `Microsoft.NET.Test.Sdk`.
 
-## 🔍 2.0.1
+## [2.0.1]
 
 - Renamed the changelog enforcement action.
 
