@@ -9,7 +9,7 @@ public sealed partial class C270154
     /// <summary>
     /// Tackles the problem using just LINQ methods.
     /// </summary>
-    private static IEnumerable<string> LinqRun(string characters, int length) => Enumerable.Range(1, length - 1)
+    private static IEnumerable<string> LinqRun(string characters, int length) => Gr(length - 1)
         .Aggregate(characters.Select(c => c.ToString()), (current, _) =>
             current.SelectMany(prefix =>
                     characters.Where(c => c != prefix.LastOrDefault()),

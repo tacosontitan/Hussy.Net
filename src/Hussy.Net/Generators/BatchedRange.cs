@@ -27,7 +27,7 @@ public static partial class Hussy
     public static IEnumerable<IEnumerable<int>> Gbr(
         int count,
         int batchSize) =>
-        Enumerable.Range(1, count).Chunk(batchSize);
+        Gr(count).Chunk(batchSize);
 
     /// <summary>
     /// Generates a range of values from the specified <paramref name="start"/> through the specified <paramref name="count"/> value.
@@ -40,7 +40,7 @@ public static partial class Hussy
         int start,
         int count,
         int batchSize) =>
-        Enumerable.Range(start, count).Chunk(batchSize);
+        Gr(start, count).Chunk(batchSize);
 
     /// <summary>
     /// Generates a range of values from the specified <paramref name="start"/> through the specified <paramref name="count"/> value.

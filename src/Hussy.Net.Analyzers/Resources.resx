@@ -51,4 +51,16 @@
     <data name="HN0001CodeFixTitle" xml:space="preserve">
         <value>Use 'Ts()' instead</value><comment>The title of the code fix.</comment>
     </data>
+    <data name="HN0002Description" xml:space="preserve">
+        <value>The 'Gr' methods are shorthands for 'Enumerable.Range' when generating simple ranges.</value><comment>An optional longer localizable description of the diagnostic.</comment>
+    </data>
+    <data name="HN0002MessageFormat" xml:space="preserve">
+        <value>Use 'Gr()' instead of 'Enumerable.Range()' for simple ranges</value><comment>The format-able message the diagnostic displays.</comment>
+    </data>
+    <data name="HN0002Title" xml:space="preserve">
+        <value>Use 'Gr' shorthand for simple ranges</value><comment>The title of the diagnostic.</comment>
+    </data>
+    <data name="HN0002CodeFixTitle" xml:space="preserve">
+        <value>Use 'Gr()' instead</value><comment>The title of the code fix.</comment>
+    </data>
 </root>
