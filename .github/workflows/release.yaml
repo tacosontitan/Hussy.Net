@@ -5,6 +5,9 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write
+
 jobs:
   build-and-release:
     runs-on: ubuntu-latest
@@ -37,9 +40,6 @@ jobs:
       - name: 🎁 Package
         run: dotnet pack -c Release --no-build --property:PackageOutputPath=../../nupkgs
 
-      - name: ⬆️ Push to NuGet
-        run: dotnet nuget push "./nupkgs/*.nupkg" --skip-duplicate --source "https://api.nuget.org/v3/index.json" --api-key ${{ secrets.NUGET_PUBLISH_KEY }}
-
       - name: 📖 Read Release Notes
         id: release-notes
         run: |
@@ -68,8 +68,15 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git ls-remote --exit-code --tags origin "${{ steps.version.outputs.tag }}" >/dev/null 2>&1; then
+            echo "Tag ${{ steps.version.outputs.tag }} already exists"
+            exit 0
+          fi
           git tag ${{ steps.version.outputs.tag }}
           git push origin ${{ steps.version.outputs.tag }}
+
+      - name: ⬆️ Push to NuGet
+        run: dotnet nuget push "./nupkgs/*.nupkg" --skip-duplicate --source "https://api.nuget.org/v3/index.json" --api-key ${{ secrets.NUGET_PUBLISH_KEY }}
 
       - name: 🎉 Create Release
         uses: ncipollo/release-action@v1
