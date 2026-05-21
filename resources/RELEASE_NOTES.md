@@ -7,6 +7,11 @@ Hussy.Net is an esoteric programming language designed for and by C# developers 
 > [!IMPORTANT]
 > Hussy.Net is not designed to compete with other golfing languages, but rather to allow C# developers to participate in golfing challenges with a leg to stand on.
 
+## ✨ 2.1.0
+
+- Added `Gr` support for generating simple ranges.
+- Added analyzer and code fix guidance for replacing `Enumerable.Range(...)` with `Gr(...)`.
+
 ## 🔍 2.0.1
 
 - Renamed the changelog enforcement action.
