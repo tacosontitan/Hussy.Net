@@ -24,16 +24,58 @@ if ([string]::IsNullOrWhiteSpace($Token)) {
 }
 
 $headers = @{
-    Authorization = "token $Token"
     Accept        = 'application/vnd.github+json'
     'X-GitHub-Api-Version' = '2022-11-28'
 }
 
+$authHeaders = @(
+    "Bearer $Token",
+    "token $Token"
+)
+
 $baseUri = "https://api.github.com/repos/$Owner/$Repository"
 $parentIssueUri = "$baseUri/issues/$ParentIssueNumber"
 
+function Invoke-GitHubApi {
+    param(
+        [Parameter(Mandatory)]
+        [ValidateSet('Get', 'Post')]
+        [string]$Method,
+
+        [Parameter(Mandatory)]
+        [string]$Uri,
+
+        [Parameter()]
+        [string]$Body,
+
+        [Parameter()]
+        [string]$ContentType
+    )
+
+    foreach ($authHeader in $authHeaders) {
+        $requestHeaders = $headers.Clone()
+        $requestHeaders.Authorization = $authHeader
+
+        try {
+            if ($Method -eq 'Post') {
+                return Invoke-RestMethod -Method $Method -Uri $Uri -Headers $requestHeaders -Body $Body -ContentType $ContentType
+            }
+
+            return Invoke-RestMethod -Method $Method -Uri $Uri -Headers $requestHeaders
+        }
+        catch {
+            $statusCode = $_.Exception.Response.StatusCode.value__
+            if ($statusCode -ne 401) {
+                throw
+            }
+        }
+    }
+
+    throw 'Authentication failed. Ensure your token is valid and has repository issue permissions.'
+}
+
 Write-Host "Loading issue #$ParentIssueNumber from $Owner/$Repository..."
-$parentIssue = Invoke-RestMethod -Method Get -Uri $parentIssueUri -Headers $headers
+$parentIssue = Invoke-GitHubApi -Method Get -Uri $parentIssueUri
 
 if (-not $parentIssue.body) {
     throw "Issue #$ParentIssueNumber has no body content to parse."
@@ -105,14 +147,14 @@ $page = 1
 
 while ($true) {
     $issuesPageUri = "$baseUri/issues?state=all&per_page=100&page=$page"
-    $issuesPage = Invoke-RestMethod -Method Get -Uri $issuesPageUri -Headers $headers
+    $issuesPage = Invoke-GitHubApi -Method Get -Uri $issuesPageUri
 
     if (-not $issuesPage -or $issuesPage.Count -eq 0) {
         break
     }
 
     foreach ($issue in $issuesPage) {
-        # Exclude pull requests; issue API can return both.
+        # Only include issues (pull requests contain the pull_request property).
         if (-not $issue.pull_request) {
             [void]$allIssues.Add($issue)
         }
@@ -134,7 +176,7 @@ foreach ($issue in $allIssues) {
 
 $featuresToCreate = [System.Collections.Generic.List[object]]::new()
 $currentCategory = 'implementation'
-$lines = $parentIssue.body -split "`r?`n"
+$lines = $parentIssue.body -split '\r?\n'
 
 foreach ($line in $lines) {
     if ($line -match 'need to be evaluated for potential sunsetting') {
@@ -142,7 +184,7 @@ foreach ($line in $lines) {
         continue
     }
 
-    if ($line -match '^\s*-\s*\[(?<state>[xX ])\]\s*(?<feature>.+?)\s*$') {
+    if ($line -match '^\s*-\s*\[(?<state>[xX ])\]\s*(?<feature>.+)\s*$') {
         $state = $matches.state
         $feature = $matches.feature.Trim()
 
@@ -185,7 +227,7 @@ foreach ($item in $featuresToCreate) {
     } | ConvertTo-Json -Depth 5
 
     if ($PSCmdlet.ShouldProcess($item.Title, 'Create GitHub issue')) {
-        $createdIssue = Invoke-RestMethod -Method Post -Uri "$baseUri/issues" -Headers $headers -Body $payload -ContentType 'application/json'
+        $createdIssue = Invoke-GitHubApi -Method Post -Uri "$baseUri/issues" -Body $payload -ContentType 'application/json'
         Write-Host "Created #$($createdIssue.number): $($createdIssue.title)"
         [void]$existingTitles.Add($item.Title)
         $created++
