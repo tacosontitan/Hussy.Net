@@ -51,4 +51,16 @@
     <data name="HN0001CodeFixTitle" xml:space="preserve">
         <value>Use 'Ts()' instead</value><comment>The title of the code fix.</comment>
     </data>
+    <data name="HN0002Description" xml:space="preserve">
+        <value>The 'Fsq' method is a shorthand for classic bracketed sequence formatting.</value><comment>An optional longer localizable description of the diagnostic.</comment>
+    </data>
+    <data name="HN0002MessageFormat" xml:space="preserve">
+        <value>Use 'Fsq()' instead of manually formatting the sequence display string</value><comment>The format-able message the diagnostic displays.</comment>
+    </data>
+    <data name="HN0002Title" xml:space="preserve">
+        <value>Use 'Fsq' shorthand for formatted sequence strings</value><comment>The title of the diagnostic.</comment>
+    </data>
+    <data name="HN0002CodeFixTitle" xml:space="preserve">
+        <value>Use 'Fsq()' instead</value><comment>The title of the code fix.</comment>
+    </data>
 </root>
