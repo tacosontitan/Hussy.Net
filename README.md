@@ -53,4 +53,11 @@ curiosities:
 
 Hussy.Net is built with .NET developers in mind. It expands on the C# language directly, so all native C# features are available by default. In addition to the native features of C#, there are several features which can help you create concise snippets with ease:
 
-- TBD
+- A condensed static API surface through the `Hussy` class for golf-friendly C# snippets.
+- Core math and logic helpers for concise arithmetic, divisibility, parity, null checks, and reversal-based comparisons.
+- LINQ-style helpers for batching, filtering, mapping, de-duplication, indexing, and string joining.
+- Generator and iterator helpers for range creation, repetition, loops, and Cartesian traversal.
+- Display and output helpers for formatting, console writing, separators, and simple header formatting.
+- Input and conversion helpers for typed console prompts and compact generic conversions.
+- Included challenge-oriented modules and samples such as Hello World, FizzBuzz, palindrome checks, and playground solutions.
+- Roslyn analyzer support with a code fix to encourage golf-friendly APIs such as `Ts()` over `ToString()`.
