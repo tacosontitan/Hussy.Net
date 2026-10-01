@@ -7,6 +7,12 @@ Hussy.Net is an esoteric programming language designed for and by C# developers 
 > [!IMPORTANT]
 > Hussy.Net is not designed to compete with other golfing languages, but rather to allow C# developers to participate in golfing challenges with a leg to stand on.
 
+## [2.0.3]
+
+- Updated NuGet dependencies, including Roslyn analyzer packages, test tooling, and `coverlet.collector`.
+- Updated GitHub Actions workflow dependencies to current major versions.
+- Pinned the .NET SDK used by the repository.
+
 ## [2.0.2]
 
 - Updated dependency versions, including but not limited to `coverlet.collector`, `JetBrains.Annotations`, `Microsoft.CodeAnalysis.Analyzers`, `Microsoft.CodeAnalysis.CSharp`, `Microsoft.CodeAnalysis.CSharp.Workspaces`, and `Microsoft.NET.Test.Sdk`.
