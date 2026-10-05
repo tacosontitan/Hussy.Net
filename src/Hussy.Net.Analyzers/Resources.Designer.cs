@@ -105,5 +105,25 @@ namespace Hussy.Net.Analyzers
         {
             get { return ResourceManager.GetString("HN0001CodeFixTitle", resourceCulture); }
         }
+
+        internal static string HN0002Description
+        {
+            get { return ResourceManager.GetString("HN0002Description", resourceCulture); }
+        }
+
+        internal static string HN0002MessageFormat
+        {
+            get { return ResourceManager.GetString("HN0002MessageFormat", resourceCulture); }
+        }
+
+        internal static string HN0002Title
+        {
+            get { return ResourceManager.GetString("HN0002Title", resourceCulture); }
+        }
+
+        internal static string HN0002CodeFixTitle
+        {
+            get { return ResourceManager.GetString("HN0002CodeFixTitle", resourceCulture); }
+        }
     }
 }

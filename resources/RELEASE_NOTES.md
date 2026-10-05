@@ -7,6 +7,10 @@ Hussy.Net is an esoteric programming language designed for and by C# developers 
 > [!IMPORTANT]
 > Hussy.Net is not designed to compete with other golfing languages, but rather to allow C# developers to participate in golfing challenges with a leg to stand on.
 
+## [3.0.0]
+
+- Added `Fsq` sequence formatting and an analyzer/code fix for bracketed `string.Join` interpolations.
+
 ## [2.0.3]
 
 - Updated NuGet dependencies, including Roslyn analyzer packages, test tooling, and `coverlet.collector`.
